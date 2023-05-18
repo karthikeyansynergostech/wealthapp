@@ -600,8 +600,8 @@ module.exports.remove = removeAccents;
 /***/ 7308:
 /***/ (function(module, exports, __webpack_require__) {
 
-var __WEBPACK_AMD_DEFINE_RESULT__;;/*! showdown v 1.9.1 - 02-11-2019 */
-(function(){
+var __WEBPACK_AMD_DEFINE_RESULT__;;/*! showdown v 1.9.1 - 02-11-2019 */
+(function(){
 /**
  * Created by Tivie on 13-07-2015.
  */
@@ -794,7 +794,7 @@ function allOptionsOn () {
   }
   return ret;
 }
-
+
 /**
  * Created by Tivie on 06-01-2015.
  */
@@ -1175,7 +1175,7 @@ showdown.validateExtension = function (ext) {
   }
   return true;
 };
-
+
 /**
  * showdownjs helper functions
  */
@@ -2779,7 +2779,7 @@ showdown.helper.emojis = {
   'octocat':  '<img alt=":octocat:" height="20" width="20" align="absmiddle" src="https://assets-cdn.github.com/images/icons/emoji/octocat.png">',
   'showdown': '<span style="font-family: \'Anonymous Pro\', monospace; text-decoration: underline; text-decoration-style: dashed; text-decoration-color: #3e8b8a;text-underline-position: under;">S</span>'
 };
-
+
 /**
  * Created by Estevao on 31-05-2015.
  */
@@ -3382,7 +3382,7 @@ showdown.Converter = function (converterOptions) {
     metadata.raw = raw;
   };
 };
-
+
 /**
  * Turn Markdown link shortcuts into XHTML <a> tags.
  */
@@ -3481,7 +3481,7 @@ showdown.subParser('anchors', function (text, options, globals) {
   text = globals.converter._dispatch('anchors.after', text, options, globals);
   return text;
 });
-
+
 // url allowed chars [a-z\d_.~:/?#[]@!$&'()*+,;=-]
 
 var simpleURLRegex  = /([*~_]+|\b)(((https?|ftp|dict):\/\/|www\.)[^'">\s]+?\.[^'">\s]+?)()(\1)?(?=\s|$)(?!["<>])/gi,
@@ -3561,7 +3561,7 @@ showdown.subParser('simplifiedAutoLinks', function (text, options, globals) {
 
   return text;
 });
-
+
 /**
  * These are all the transformations that form block-level
  * tags like paragraphs, headers, and list items.
@@ -3594,7 +3594,7 @@ showdown.subParser('blockGamut', function (text, options, globals) {
 
   return text;
 });
-
+
 showdown.subParser('blockQuotes', function (text, options, globals) {
   'use strict';
 
@@ -3637,7 +3637,7 @@ showdown.subParser('blockQuotes', function (text, options, globals) {
   text = globals.converter._dispatch('blockQuotes.after', text, options, globals);
   return text;
 });
-
+
 /**
  * Process Markdown `<pre><code>` blocks.
  */
@@ -3676,7 +3676,7 @@ showdown.subParser('codeBlocks', function (text, options, globals) {
   text = globals.converter._dispatch('codeBlocks.after', text, options, globals);
   return text;
 });
-
+
 /**
  *
  *   *  Backtick quotes are used for <code></code> spans.
@@ -3725,7 +3725,7 @@ showdown.subParser('codeSpans', function (text, options, globals) {
   text = globals.converter._dispatch('codeSpans.after', text, options, globals);
   return text;
 });
-
+
 /**
  * Create a full HTML document from the processed markdown
  */
@@ -3788,7 +3788,7 @@ showdown.subParser('completeHTMLDocument', function (text, options, globals) {
   text = globals.converter._dispatch('completeHTMLDocument.after', text, options, globals);
   return text;
 });
-
+
 /**
  * Convert all tabs to spaces
  */
@@ -3822,7 +3822,7 @@ showdown.subParser('detab', function (text, options, globals) {
   text = globals.converter._dispatch('detab.after', text, options, globals);
   return text;
 });
-
+
 showdown.subParser('ellipsis', function (text, options, globals) {
   'use strict';
 
@@ -3834,7 +3834,7 @@ showdown.subParser('ellipsis', function (text, options, globals) {
 
   return text;
 });
-
+
 /**
  * Turn emoji codes into emojis
  *
@@ -3862,7 +3862,7 @@ showdown.subParser('emoji', function (text, options, globals) {
 
   return text;
 });
-
+
 /**
  * Smart processing for ampersands and angle brackets that need to be encoded.
  */
@@ -3886,7 +3886,7 @@ showdown.subParser('encodeAmpsAndAngles', function (text, options, globals) {
   text = globals.converter._dispatch('encodeAmpsAndAngles.after', text, options, globals);
   return text;
 });
-
+
 /**
  * Returns the string, with after processing the following backslash escape sequences.
  *
@@ -3908,7 +3908,7 @@ showdown.subParser('encodeBackslashEscapes', function (text, options, globals) {
   text = globals.converter._dispatch('encodeBackslashEscapes.after', text, options, globals);
   return text;
 });
-
+
 /**
  * Encode/escape certain characters inside Markdown code runs.
  * The point is that in code, these characters are literals,
@@ -3932,7 +3932,7 @@ showdown.subParser('encodeCode', function (text, options, globals) {
   text = globals.converter._dispatch('encodeCode.after', text, options, globals);
   return text;
 });
-
+
 /**
  * Within tags -- meaning between < and > -- encode [\ ` * _ ~ =] so they
  * don't conflict with their use in Markdown for code, italics and strong.
@@ -3959,7 +3959,7 @@ showdown.subParser('escapeSpecialCharsWithinTagAttributes', function (text, opti
   text = globals.converter._dispatch('escapeSpecialCharsWithinTagAttributes.after', text, options, globals);
   return text;
 });
-
+
 /**
  * Handle github codeblocks prior to running HashHTML so that
  * HTML contained within the codeblock gets escaped properly
@@ -4006,7 +4006,7 @@ showdown.subParser('githubCodeBlocks', function (text, options, globals) {
 
   return globals.converter._dispatch('githubCodeBlocks.after', text, options, globals);
 });
-
+
 showdown.subParser('hashBlock', function (text, options, globals) {
   'use strict';
   text = globals.converter._dispatch('hashBlock.before', text, options, globals);
@@ -4015,7 +4015,7 @@ showdown.subParser('hashBlock', function (text, options, globals) {
   text = globals.converter._dispatch('hashBlock.after', text, options, globals);
   return text;
 });
-
+
 /**
  * Hash and escape <code> elements that should not be parsed as markdown
  */
@@ -4034,7 +4034,7 @@ showdown.subParser('hashCodeTags', function (text, options, globals) {
   text = globals.converter._dispatch('hashCodeTags.after', text, options, globals);
   return text;
 });
-
+
 showdown.subParser('hashElement', function (text, options, globals) {
   'use strict';
 
@@ -4054,7 +4054,7 @@ showdown.subParser('hashElement', function (text, options, globals) {
     return blockText;
   };
 });
-
+
 showdown.subParser('hashHTMLBlocks', function (text, options, globals) {
   'use strict';
   text = globals.converter._dispatch('hashHTMLBlocks.before', text, options, globals);
@@ -4153,7 +4153,7 @@ showdown.subParser('hashHTMLBlocks', function (text, options, globals) {
   text = globals.converter._dispatch('hashHTMLBlocks.after', text, options, globals);
   return text;
 });
-
+
 /**
  * Hash span elements that should not be parsed as markdown
  */
@@ -4218,7 +4218,7 @@ showdown.subParser('unhashHTMLSpans', function (text, options, globals) {
   text = globals.converter._dispatch('unhashHTMLSpans.after', text, options, globals);
   return text;
 });
-
+
 /**
  * Hash and escape <pre><code> elements that should not be parsed as markdown
  */
@@ -4238,7 +4238,7 @@ showdown.subParser('hashPreCodeTags', function (text, options, globals) {
   text = globals.converter._dispatch('hashPreCodeTags.after', text, options, globals);
   return text;
 });
-
+
 showdown.subParser('headers', function (text, options, globals) {
   'use strict';
 
@@ -4365,7 +4365,7 @@ showdown.subParser('headers', function (text, options, globals) {
   text = globals.converter._dispatch('headers.after', text, options, globals);
   return text;
 });
-
+
 /**
  * Turn Markdown link shortcuts into XHTML <a> tags.
  */
@@ -4381,7 +4381,7 @@ showdown.subParser('horizontalRule', function (text, options, globals) {
   text = globals.converter._dispatch('horizontalRule.after', text, options, globals);
   return text;
 });
-
+
 /**
  * Turn Markdown image shortcuts into <img> tags.
  */
@@ -4486,7 +4486,7 @@ showdown.subParser('images', function (text, options, globals) {
   text = globals.converter._dispatch('images.after', text, options, globals);
   return text;
 });
-
+
 showdown.subParser('italicsAndBold', function (text, options, globals) {
   'use strict';
 
@@ -4557,7 +4557,7 @@ showdown.subParser('italicsAndBold', function (text, options, globals) {
   text = globals.converter._dispatch('italicsAndBold.after', text, options, globals);
   return text;
 });
-
+
 /**
  * Form HTML ordered (numbered) and unordered (bulleted) lists.
  */
@@ -4761,7 +4761,7 @@ showdown.subParser('lists', function (text, options, globals) {
   text = globals.converter._dispatch('lists.after', text, options, globals);
   return text;
 });
-
+
 /**
  * Parse metadata at the top of the document
  */
@@ -4811,7 +4811,7 @@ showdown.subParser('metadata', function (text, options, globals) {
   text = globals.converter._dispatch('metadata.after', text, options, globals);
   return text;
 });
-
+
 /**
  * Remove one level of line-leading tabs or spaces
  */
@@ -4829,7 +4829,7 @@ showdown.subParser('outdent', function (text, options, globals) {
   text = globals.converter._dispatch('outdent.after', text, options, globals);
   return text;
 });
-
+
 /**
  *
  */
@@ -4900,7 +4900,7 @@ showdown.subParser('paragraphs', function (text, options, globals) {
   text = text.replace(/\n+$/g, '');
   return globals.converter._dispatch('paragraphs.after', text, options, globals);
 });
-
+
 /**
  * Run extension
  */
@@ -4921,7 +4921,7 @@ showdown.subParser('runExtension', function (ext, text, options, globals) {
 
   return text;
 });
-
+
 /**
  * These are all the transformations that occur *within* block-level
  * tags like paragraphs, headers, and list items.
@@ -4971,7 +4971,7 @@ showdown.subParser('spanGamut', function (text, options, globals) {
   text = globals.converter._dispatch('spanGamut.after', text, options, globals);
   return text;
 });
-
+
 showdown.subParser('strikethrough', function (text, options, globals) {
   'use strict';
 
@@ -4990,7 +4990,7 @@ showdown.subParser('strikethrough', function (text, options, globals) {
 
   return text;
 });
-
+
 /**
  * Strips link definitions from text, stores the URLs and titles in
  * hash references.
@@ -5044,7 +5044,7 @@ showdown.subParser('stripLinkDefinitions', function (text, options, globals) {
 
   return text;
 });
-
+
 showdown.subParser('tables', function (text, options, globals) {
   'use strict';
 
@@ -5187,7 +5187,7 @@ showdown.subParser('tables', function (text, options, globals) {
 
   return text;
 });
-
+
 showdown.subParser('underline', function (text, options, globals) {
   'use strict';
 
@@ -5220,7 +5220,7 @@ showdown.subParser('underline', function (text, options, globals) {
 
   return text;
 });
-
+
 /**
  * Swap back in all the special characters we've hidden.
  */
@@ -5236,7 +5236,7 @@ showdown.subParser('unescapeSpecialChars', function (text, options, globals) {
   text = globals.converter._dispatch('unescapeSpecialChars.after', text, options, globals);
   return text;
 });
-
+
 showdown.subParser('makeMarkdown.blockquote', function (node, globals) {
   'use strict';
 
@@ -5259,7 +5259,7 @@ showdown.subParser('makeMarkdown.blockquote', function (node, globals) {
   txt = '> ' + txt.split('\n').join('\n> ');
   return txt;
 });
-
+
 showdown.subParser('makeMarkdown.codeBlock', function (node, globals) {
   'use strict';
 
@@ -5267,13 +5267,13 @@ showdown.subParser('makeMarkdown.codeBlock', function (node, globals) {
       num  = node.getAttribute('precodenum');
   return '```' + lang + '\n' + globals.preList[num] + '\n```';
 });
-
+
 showdown.subParser('makeMarkdown.codeSpan', function (node) {
   'use strict';
 
   return '`' + node.innerHTML + '`';
 });
-
+
 showdown.subParser('makeMarkdown.emphasis', function (node, globals) {
   'use strict';
 
@@ -5289,7 +5289,7 @@ showdown.subParser('makeMarkdown.emphasis', function (node, globals) {
   }
   return txt;
 });
-
+
 showdown.subParser('makeMarkdown.header', function (node, globals, headerLevel) {
   'use strict';
 
@@ -5307,13 +5307,13 @@ showdown.subParser('makeMarkdown.header', function (node, globals, headerLevel) 
   }
   return txt;
 });
-
+
 showdown.subParser('makeMarkdown.hr', function () {
   'use strict';
 
   return '---';
 });
-
+
 showdown.subParser('makeMarkdown.image', function (node) {
   'use strict';
 
@@ -5332,7 +5332,7 @@ showdown.subParser('makeMarkdown.image', function (node) {
   }
   return txt;
 });
-
+
 showdown.subParser('makeMarkdown.links', function (node, globals) {
   'use strict';
 
@@ -5353,7 +5353,7 @@ showdown.subParser('makeMarkdown.links', function (node, globals) {
   }
   return txt;
 });
-
+
 showdown.subParser('makeMarkdown.list', function (node, globals, type) {
   'use strict';
 
@@ -5387,7 +5387,7 @@ showdown.subParser('makeMarkdown.list', function (node, globals, type) {
   txt += '\n<!-- -->\n';
   return txt.trim();
 });
-
+
 showdown.subParser('makeMarkdown.listItem', function (node, globals) {
   'use strict';
 
@@ -5413,7 +5413,7 @@ showdown.subParser('makeMarkdown.listItem', function (node, globals) {
 
   return listItemTxt;
 });
-
+
 
 
 showdown.subParser('makeMarkdown.node', function (node, globals, spansOnly) {
@@ -5534,7 +5534,7 @@ showdown.subParser('makeMarkdown.node', function (node, globals, spansOnly) {
 
   return txt;
 });
-
+
 showdown.subParser('makeMarkdown.paragraph', function (node, globals) {
   'use strict';
 
@@ -5552,14 +5552,14 @@ showdown.subParser('makeMarkdown.paragraph', function (node, globals) {
 
   return txt;
 });
-
+
 showdown.subParser('makeMarkdown.pre', function (node, globals) {
   'use strict';
 
   var num  = node.getAttribute('prenum');
   return '<pre>' + globals.preList[num] + '</pre>';
 });
-
+
 showdown.subParser('makeMarkdown.strikethrough', function (node, globals) {
   'use strict';
 
@@ -5575,7 +5575,7 @@ showdown.subParser('makeMarkdown.strikethrough', function (node, globals) {
   }
   return txt;
 });
-
+
 showdown.subParser('makeMarkdown.strong', function (node, globals) {
   'use strict';
 
@@ -5591,7 +5591,7 @@ showdown.subParser('makeMarkdown.strong', function (node, globals) {
   }
   return txt;
 });
-
+
 showdown.subParser('makeMarkdown.table', function (node, globals) {
   'use strict';
 
@@ -5662,7 +5662,7 @@ showdown.subParser('makeMarkdown.table', function (node, globals) {
 
   return txt.trim();
 });
-
+
 showdown.subParser('makeMarkdown.tableCell', function (node, globals) {
   'use strict';
 
@@ -5678,7 +5678,7 @@ showdown.subParser('makeMarkdown.tableCell', function (node, globals) {
   }
   return txt.trim();
 });
-
+
 showdown.subParser('makeMarkdown.txt', function (node) {
   'use strict';
 
@@ -5722,7 +5722,7 @@ showdown.subParser('makeMarkdown.txt', function (node) {
 
   return txt;
 });
-
+
 var root = this;
 
 // AMD Loader
@@ -5735,7 +5735,7 @@ if (true) {
 
 // CommonJS/nodeJS Loader
 } else {}
-}).call(this);
+}).call(this);
 
 
 
@@ -6191,245 +6191,245 @@ const __EXPERIMENTAL_PATHS_WITH_MERGE = {
 };
 
 ;// CONCATENATED MODULE: ./node_modules/tslib/tslib.es6.js
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation.
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */
-/* global Reflect, Promise */
-
-var extendStatics = function(d, b) {
-    extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-    return extendStatics(d, b);
-};
-
-function __extends(d, b) {
-    if (typeof b !== "function" && b !== null)
-        throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-    extendStatics(d, b);
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-}
-
-var __assign = function() {
-    __assign = Object.assign || function __assign(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-        }
-        return t;
-    }
-    return __assign.apply(this, arguments);
-}
-
-function __rest(s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-}
-
-function __decorate(decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-}
-
-function __param(paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-}
-
-function __metadata(metadataKey, metadataValue) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
-}
-
-function __awaiter(thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-}
-
-function __generator(thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-}
-
-var __createBinding = Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-});
-
-function __exportStar(m, o) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p)) __createBinding(o, m, p);
-}
-
-function __values(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-}
-
-function __read(o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-    }
-    catch (error) { e = { error: error }; }
-    finally {
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
-        }
-        finally { if (e) throw e.error; }
-    }
-    return ar;
-}
-
-/** @deprecated */
-function __spread() {
-    for (var ar = [], i = 0; i < arguments.length; i++)
-        ar = ar.concat(__read(arguments[i]));
-    return ar;
-}
-
-/** @deprecated */
-function __spreadArrays() {
-    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
-    for (var r = Array(s), k = 0, i = 0; i < il; i++)
-        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
-            r[k] = a[j];
-    return r;
-}
-
-function __spreadArray(to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-}
-
-function __await(v) {
-    return this instanceof __await ? (this.v = v, this) : new __await(v);
-}
-
-function __asyncGenerator(thisArg, _arguments, generator) {
-    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-    var g = generator.apply(thisArg, _arguments || []), i, q = [];
-    return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
-    function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
-    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
-    function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
-    function fulfill(value) { resume("next", value); }
-    function reject(value) { resume("throw", value); }
-    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
-}
-
-function __asyncDelegator(o) {
-    var i, p;
-    return i = {}, verb("next"), verb("throw", function (e) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
-    function verb(n, f) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
-}
-
-function __asyncValues(o) {
-    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-    var m = o[Symbol.asyncIterator], i;
-    return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
-    function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
-    function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
-}
-
-function __makeTemplateObject(cooked, raw) {
-    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
-    return cooked;
-};
-
-var __setModuleDefault = Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-};
-
-function __importStar(mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-}
-
-function __importDefault(mod) {
-    return (mod && mod.__esModule) ? mod : { default: mod };
-}
-
-function __classPrivateFieldGet(receiver, state, kind, f) {
-    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
-    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
-}
-
-function __classPrivateFieldSet(receiver, state, value, kind, f) {
-    if (kind === "m") throw new TypeError("Private method is not writable");
-    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
-    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
-}
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    if (typeof b !== "function" && b !== null)
+        throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    }
+    return __assign.apply(this, arguments);
+}
+
+function __rest(s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+}
+
+function __decorate(decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+}
+
+function __param(paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+}
+
+function __metadata(metadataKey, metadataValue) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
+}
+
+function __awaiter(thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+}
+
+function __generator(thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+}
+
+var __createBinding = Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+});
+
+function __exportStar(m, o) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p)) __createBinding(o, m, p);
+}
+
+function __values(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+}
+
+function __read(o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+}
+
+/** @deprecated */
+function __spread() {
+    for (var ar = [], i = 0; i < arguments.length; i++)
+        ar = ar.concat(__read(arguments[i]));
+    return ar;
+}
+
+/** @deprecated */
+function __spreadArrays() {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+}
+
+function __spreadArray(to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+}
+
+function __await(v) {
+    return this instanceof __await ? (this.v = v, this) : new __await(v);
+}
+
+function __asyncGenerator(thisArg, _arguments, generator) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var g = generator.apply(thisArg, _arguments || []), i, q = [];
+    return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
+    function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
+    function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
+    function fulfill(value) { resume("next", value); }
+    function reject(value) { resume("throw", value); }
+    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
+}
+
+function __asyncDelegator(o) {
+    var i, p;
+    return i = {}, verb("next"), verb("throw", function (e) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
+    function verb(n, f) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
+}
+
+function __asyncValues(o) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var m = o[Symbol.asyncIterator], i;
+    return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
+    function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+    function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
+}
+
+function __makeTemplateObject(cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
+
+var __setModuleDefault = Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+};
+
+function __importStar(mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+}
+
+function __importDefault(mod) {
+    return (mod && mod.__esModule) ? mod : { default: mod };
+}
+
+function __classPrivateFieldGet(receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+}
+
+function __classPrivateFieldSet(receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+}
 
 ;// CONCATENATED MODULE: ./node_modules/lower-case/dist.es2015/index.js
 /**

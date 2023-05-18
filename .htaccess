@@ -24,10 +24,3 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
-
-
-
-#redirect url
-#===============
-
-Redirect 301 /synergos https://smilecraftgoa.com/services/margao/root-canal-treatment/

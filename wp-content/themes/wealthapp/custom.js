@@ -134,7 +134,7 @@ if ( $(window).width() > 781 ) {
     }else{
         console.log('waring');
     }
-    // device_resolution();
+    device_resolution();
 }
   
 });
@@ -220,7 +220,7 @@ $(document).on('submit','form.ajax-form',function(e){
 
 
 
-function onlyalphabets(val){
+function only_alphabets(val){
          if(!/^[a-zA-Z .]*$/g.test(val)){
              return false;
          }
@@ -235,58 +235,40 @@ function phonenumber(val){
 }
     
 function email(val){
-    console.log("email")
-    console.log(val)
-
     if(!/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.test(val)){
         return false;
     }
     return true;
 }
 
-function minchars(val, count){
+function min_chars(val, count){
     return val.length >= count;
 }
 
-function maxchars(val, count){
-    return val.length <= count;
-}
-
-function chars(val, count){
+function max_chars(val, count){
     return val.length <= count;
 }
 
 
-function parse(str) {
-    var args = [].slice.call(arguments, 1),
-        i = 0;
-
-    return str.replace(/%s/g, () => args[i++]);
-}
-
-$(document).on('blur','.form-field-validate',function(){
-    var required = $(this).attr('data-required');
-    var validatetype = $(this).attr('data-validate');
-    
+jQuery(document).on('blur','.form-field-validate',function(){
+    console.log('out');
+    var required = jQuery(this).attr('data-required');
+    var validatetype = jQuery(this).attr('data-validate');
     if(validatetype!=undefined){
         var validatetypeoption = validatetype.split('|');
     }
-    var length =validatetypeoption.length;
-
     
-    var value = $(this).val();
+    var value = jQuery(this).val();
     
     var error_msg = {
         'required_error' : "this field is required",
-        'onlyalphabets' : 'Please enter a valid input',
+        'only_alphabets' : 'Please enter a valid input',
         'phonenumber' : 'Please enter a valid phone number',
         'email' : 'Please enter a valid email',
-        'minchars':'minimum length should be  %s',
-        'maxchars':'maximum length should be  %s',
-        'chars':'character length should be  %s',
-
     }
-
+    let sentence = `${name} is ${age} years old and likes ${food}`;
+    
+    
     var err_msg ="";
 
     
@@ -298,35 +280,20 @@ $(document).on('blur','.form-field-validate',function(){
     
     
     if(validatetype!=undefined && err_msg=="" ){
-        if(length==1){
-            if(window[validatetype](value)==false ){
+         if(window[element](validatetype)==false ){
                 err_msg = error_msg[validatetype];
-            }  
-        }else{
-            validatetypeoption.forEach(function(element){
-
-                if(element.split('_').length == 1){
-                    if(window[element](value)==false && err_msg=="" ){
-                        err_msg = error_msg[element];
-                    }  
-                }else{
-                    var values = element.split('_');
-                    var functionname = values[0];
-                    var functionaruguments = values[1];
-                    if(window[functionname](value,functionaruguments)==false && err_msg=="" ){
-                        err_msg = parse(error_msg[functionname], functionaruguments) ;
-                    } 
-                }
-            });
-        }
-
-         
+            } 
         
-        
+        validatetypeoption.foreach((element)=>function(){
+            if(window[element](value)==false && err_msg=="" ){
+                err_msg = error_msg[element];
+            } 
+        });
     }  
     if(err_msg!=""){
-        $(this).closest('.form-group').find('.error_txt').html(err_msg);
+        
+        jQuery(this).closest('.form-group').find('.error_txt').html(err_msg);
     }else{
-        $(this).closest('.form-group').find('.error_txt').html("");
+        jQuery(this).closest('.form-group').find('.error_txt').html("");
     }
 });
