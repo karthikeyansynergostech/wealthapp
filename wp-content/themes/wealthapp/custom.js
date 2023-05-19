@@ -1,6 +1,6 @@
 var commonoption = {
 		    loop:true,
-		    dots: false,
+		    dots: true,
 		    responsive:{
 		        0:{
 		            items:1,
@@ -18,7 +18,7 @@ var commonoption = {
 		};
 var serviceoption = {
     loop:false,
-    dots: false,
+    dots: true,
     responsive:{
         0:{
             items:1,
@@ -55,6 +55,11 @@ function owlResize_servicelist($owl,option) {
     		$owl.owlCarousel(option);
 		}
 }
+
+
+
+
+
       
 
 
@@ -137,16 +142,30 @@ if ($(window).width() > 781 ) {
     }
     device_resolution();
 }
+
+$('p.counts code').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 3000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    })
+});
   
 });
 
+$("document").on("click","#videopopup",function(e){
+
+});
 
 
 
 
 $(window).scroll(function(){
     var scroll_position = $(window).scrollTop();
-    console.log(scroll_position);
     if(scroll_position>0){
         if($('header').hasClass('bg')==false){
             $('header').addClass('bg');
@@ -155,9 +174,7 @@ $(window).scroll(function(){
         $('header').removeClass('bg');
 
     }
-
-
-    if ( $(window).width() > 781 ) {
+    if ($(window).width() > 781 ) {
         add_animateclass()
     }
 });

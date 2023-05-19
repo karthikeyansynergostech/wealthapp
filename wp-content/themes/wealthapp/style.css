@@ -287,8 +287,12 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
     width: 100%;
     max-width: 100%;
     text-indent: 20px;
+    vertical-align: text-top;
+    padding-top:4px;
     
 }
+
+
 .subscribe-group .input-group>.second-block>button {
     border: none;
     border-left: 1px solid #526739;
@@ -299,6 +303,8 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
     text-align: center;
     width: 100%;
     cursor: pointer;
+    vertical-align: text-top;
+    padding-top:4px;
 }
 .l-bg{
     background:#f4fbec;
@@ -512,7 +518,7 @@ padding-left:5%;
     margin-top:-100px !important;
 }
 
-.statistics-block .counts{
+.statistics-block .counts, .statistics-block .counts code{
 font-size: 48px;
 font-weight: bold;
 }
@@ -922,7 +928,7 @@ font-size: 24px;
     
 }
 
-.play-btn:after, .play-btn:before {
+.play-btn>a:after, .play-btn>a:before {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -972,11 +978,7 @@ font-size: 24px;
   }
 }
 
-.form-group-3 {
-    width: calc(100%/3 - 25px);
-    display: inline-block;
-    margin: 10px;
-}
+
 
 .form-group input {
     line-height: 30px;
@@ -986,11 +988,6 @@ font-size: 24px;
     width: calc(100% - 20px);
 }
 
-.form-group-1 {
-    width: calc(100% - 25px);
-    display: inline-block;
-    margin:10px;
-}
 
 .form-group textarea{
     line-height: 30px;
@@ -1102,6 +1099,25 @@ div.square{
     font-size: 14px!important;
 }
 
+.alignfull.m-0.footer-bottom-text{
+    margin-bottom: 65px !important;
+    padding-bottom:85px !important;
+}
+
+.form-group-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group-row .form-group-3 , .form-group-row .form-group-1{
+    width: 100%;
+    display: inline-flex;
+}
+
+textarea{
+    resize: none;
+}
 div#fix-bottom-menu {
     position: fixed;
     bottom: 0;
@@ -1180,6 +1196,59 @@ footer .footer-title{
     font-size: 1.3rem;
 }
 
+#top-block{
+margin: 0px !important;
+}
+#top-block .triangle{
+    transform: scale(1.5);
+}
+
+#top-block .triangle .top img{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#top-block .triangle .left img{
+    position: absolute;
+    top: 60px;
+    left:-20px;
+}
+
+#top-block .triangle .right img{
+    position: absolute;
+    top: 60px;
+    left: 150px;;
+}
+
+
+.testimonial .owl-dots,.blog-carousel .owl-dots{
+    width: 90vw;
+    margin: 0px;
+}
+
+.owl-dot.active span{
+    background: #526739 !important;
+}
+
+.owl-dot span{
+    background: #869791 !important;
+}
+
+#top-block h2,#top-block h2 strong{
+    font-size: 5vw;
+}
+
+#top-block .wp-block-group.bg-block {
+    position: absolute;
+    width: 100%!important;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0px 0px !important;
+    padding: 0px!important;
+    top: unset;
+
+}
 
 @media (max-width: 992px) {
     .hide-mobile-tab{
@@ -1241,9 +1310,7 @@ footer .footer-title{
     .d-m-t--100{
         margin-top:0px!important;
     }
-    .form-group-3{
-        width: calc(100% - 25px);
-    } 
+    
     .t-max-img-300 img{
         width: 300px;
     }

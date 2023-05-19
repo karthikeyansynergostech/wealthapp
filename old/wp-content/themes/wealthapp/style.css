@@ -1134,6 +1134,10 @@ div#fix-bottom-menu nav ul li a,div#fix-bottom-menu nav ul li a:focus,div#fix-bo
    font-size: 1.5rem;
 }
 
+.footer-bottom-text{
+    padding-bottom: 100px;
+}
+
 ul.social-media-links{
     margin: 0px;
     padding: 0px;
