@@ -38,10 +38,72 @@ var serviceoption = {
         }
     }
 };
+
+var option = {
+    loop:false,
+    dots: true,
+    responsive:{
+        1000:{
+            items:1,
+            margin:50,
+        }
+    }
+};
+
+
+var linedotsoption = {
+    loop:false,
+    dots: true,
+    responsive:{
+        1000:{
+            items:1,
+            margin:50,
+        }
+    },
+    onInitialized: function(){
+        var elements = $('.awards.owl-carousel').children('.owl-dots').children();
+        $.each(elements,function(i, val){
+            elements[i].innerHTML = i+1;
+        })
+    },
+};
+
+var galleryoption = {
+    loop:true,
+    dots: true,
+    center: true,
+    responsive:{
+        0:{
+            items:1,
+        },
+        600:{
+            items:1,
+        },
+        800:{
+                items:2,
+        },
+        1000:{
+            items:3,
+        }
+    },
+    onInitialized: function(){
+        var elements = $('.gallery.owl-carousel').children('.owl-dots').children();
+        $.each(elements,function(i, val){
+            elements[i].innerHTML = i+1;
+        })
+    },
+};
+
+
 var header_bg = false;
 var $testimonial = $('.testimonial').owlCarousel(commonoption);
 var $blog = $('.slides').owlCarousel(commonoption);
 var $servicelist = $('.service-list').owlCarousel(serviceoption);
+var $officeculture = $('.office-culture').owlCarousel(option);
+var $awards = $('.awards').owlCarousel(linedotsoption);
+
+var $gallery = $('.gallery').owlCarousel(galleryoption);
+
 
 
 function owlResize_servicelist($owl,option) {
@@ -76,11 +138,13 @@ function add_animateclass(){
       	$('.section-block').removeClass('aligncenter')
     }
       	
-  	if($.scrollify.current().hasClass('.section-2, .section-4')){
+  	if($.scrollify.current().hasClass('.section-2, .section-4, .about-wealthapp')){
+        console.log('find');
   		$.scrollify.current().addClass('scatter')
   	}else{
   		$('.section-block').removeClass('scatter');
   	}
+
   	$('.section-block').removeClass('animate');
   	$.scrollify.current().addClass('animate');
 }
@@ -183,7 +247,11 @@ $(window).scroll(function(){
 $(window).bind('resize', function() { 
     owlResize($blog,commonoption);
     owlResize($testimonial,commonoption);
-	owlResize_servicelist($servicelist ,serviceoption);
+    owlResize($officeculture,option);
+    owlResize($awards,linedotsoption);
+    owlResize($gallery,galleryoption);
+    owlResize_servicelist($servicelist ,serviceoption);
+
     console.log($(window).width())
 });
         
