@@ -94,6 +94,100 @@ var galleryoption = {
     },
 };
 
+var team_thumbnailoption = {
+        loop:true,
+        dots: true,
+        margin:20,
+        slideBy:1,
+        dotsEach:true,
+        center:true,
+        responsive:{
+            0:{
+                items:1,
+            },
+            600:{
+                items:1,
+            },
+            800:{
+                    items:2,
+            },
+            1000:{
+                items:3,
+            }
+        },
+        onInitialize: function(){
+            var id = $(this)[0]['$element'][0]['id'];
+            var elements = $('#'+id).children('.item').children('a.goto');
+            $.each(elements,function(i, val){
+                var index = i+1;
+                elements[i].setAttribute("data-index",index);
+            });
+            $('#'+id).children('.owl-dots').css('display','none !important');
+            $('#'+id).children('.owl-dots').css('opacity','0 !important');
+        },
+        onInitialized: function(){
+            
+        },
+        onDragged: function(e){
+        if (e.item) {
+                var index = e.item.index - 1;
+                var count = e.item.count;
+                if (index > count) {
+                    index -= count;
+                }
+                if (index <= 0) {
+                    index += count;
+                }
+            }
+            var child = String($(this)[0]['$element'][0]['attributes']['data-child']['value']);
+            $(child).trigger('to.owl.carousel', index-1) 
+    },
+}
+
+
+
+var team_option = {
+    loop:true,
+    nav:true,
+    dots:false,
+    responsive:{
+        1000:{
+            items:1,
+            margin:50,
+        }
+    },
+    onInitialized: function(){
+        var totalslides = $(this)[0]['_items'].length;
+            var id = $(this)[0]['$element'][0]['id'];
+           $('#'+id).children('.owl-nav').children('.owl-next').before("<span class='slide_pagination'><strong>1</strong>/"+totalslides+"</span>");
+
+           var child = String($(this)[0]['$element'][0]['attributes']['data-child']['value']);
+            $(child).trigger('to.owl.carousel', 1)  
+
+
+        },
+    onChanged: function(e){
+        if (e.item) {
+                var index = e.item.index - 1;
+                var count = e.item.count;
+                if (index > count) {
+                    index -= count;
+                }
+                if (index <= 0) {
+                    index += count;
+                }
+            }
+            var id = $(this)[0]['$element'][0]['id'];
+            $('#'+id).children('.owl-nav').children('.slide_pagination').children('strong').html(index);
+
+            var child = String($(this)[0]['$element'][0]['attributes']['data-child']['value']);
+            $(child).trigger('to.owl.carousel', index)
+
+    }
+    
+};
+
+
 
 var header_bg = false;
 var $testimonial = $('.testimonial').owlCarousel(commonoption);
@@ -104,13 +198,12 @@ var $awards = $('.awards').owlCarousel(linedotsoption);
 
 var $gallery = $('.gallery').owlCarousel(galleryoption);
 
-
+var $keymanagement_thumbnail = $('.key-management-thumbnail').owlCarousel(team_thumbnailoption);
+var $keymanagement = $('.key-management').owlCarousel(team_option);
 
 function owlResize_servicelist($owl,option) {
     $owl.trigger('destroy.owl.carousel');
     $owl.html($owl.find('.owl-stage-outer').html()).removeClass('owl-loaded');
-
-
      if ($(window).width() > 781 ) {
  			$owl.addClass('off');
 		}else{
@@ -121,8 +214,11 @@ function owlResize_servicelist($owl,option) {
 
 
 
-
-      
+   $(document).on('click','a.goto',function(e){
+        var index = $(this).attr('data-index') -1;
+        console.log(index);
+        $('.key-management').trigger('to.owl.carousel', index);
+    });   
 
 
 function owlResize($owl,option) {
@@ -148,6 +244,8 @@ function add_animateclass(){
   	$('.section-block').removeClass('animate');
   	$.scrollify.current().addClass('animate');
 }
+
+
 
 function device_resolution(){
     var txt= "width:"+screen.width+" height:"+screen.height;
@@ -218,6 +316,15 @@ $('p.counts code').each(function () {
         }
     })
 });
+
+
+$(".tab-btn a").each(function(){
+    $(this).attr('data_id',$(this).attr("href"));
+    $(this).attr('onclick',"switchtab(this)");
+    $(this).addClass("tab-button");
+    $(this).attr('href',"javascript:void(0)");
+});
+
   
 });
 
@@ -225,6 +332,23 @@ $("document").on("click","#videopopup",function(e){
 
 });
 
+
+function switchtab(element){
+    $(".tab-button").removeClass("active");
+    element.classList.add('active');
+    $(".tab-content").removeClass('show');
+    $(element.getAttribute('data_id')).addClass('show');
+}
+
+$("document").on('click',',tab-button',function(){
+    alert("click");
+    var tab_section = $(this).attr('data_id');
+    $(".tab-button").removeClass("active");
+    $(this).addClass('active');
+    $(".tab-content").removeClass('show');
+    $(tab_section).addClass('show');
+    console.log(tab_section)
+})
 
 
 
