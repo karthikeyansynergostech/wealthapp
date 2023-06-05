@@ -255,16 +255,21 @@ function device_resolution(){
 $(document).ready(function(){
     
 if ($(window).width() > 781 ) {
-    $.scrollify({
-        section : ".section-block",
-        updateHash: false,
-        interstitialSection :".non-section-block",
-        easing: "easeOutExpo",
-        scrollSpeed: 1000,
-        touchScroll:true
-   });
-   add_animateclass()
-   $servicelist.addClass('off');
+    console.log();
+    if($('#disable_scrollify').length==0){
+        $.scrollify({
+            section : ".section-block",
+            updateHash: false,
+            interstitialSection :".non-section-block",
+            easing: "easeOutExpo",
+            scrollSpeed: 1000,
+            touchScroll:true
+       });
+       add_animateclass()
+       $servicelist.addClass('off');
+    }
+    
+    
 }else{
     if(!!window.IntersectionObserver){
         console.log('initialize...');
@@ -363,7 +368,9 @@ $(window).scroll(function(){
 
     }
     if ($(window).width() > 781 ) {
-        add_animateclass()
+        if($('#disable_scrollify').length==0){
+            add_animateclass()
+        }
     }
 });
 

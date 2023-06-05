@@ -918,7 +918,10 @@ font-size: 24px;
     font-size: 30px;
     font-weight: bold;
 }
-
+.bold-text-20 {
+    font-size: 20px;
+    font-weight: bold;
+}
 
 .section-4 .right-side .square{
     position: absolute;
@@ -1948,17 +1951,82 @@ transform: scale(1.8);
     display: inline-block;
     line-height: 40px;
 }
-
-
 .slide_pagination strong{
     font-size: 4rem;
     font-weight: 300;
 }
+#address-block{
+    padding: 100px 0px 100px var(--wp--custom--spacing--outer);
+}
+#address-block .gmap-block iframe{
+    height: 80vh;
+}
+#address-block .info p, #address-block .info a{
+    font-size: 1.25rem;
+}
+.bw-image img.attachment-post-thumbnail{
+    filter: grayscale(1);
+    transition: all .5s;
+}
+.bw-image:hover img.attachment-post-thumbnail{
+    filter: unset;
+}
+#top-block h2{
+    text-transform: uppercase;
+}
+#blog_listing_block.section-block{
+height: unset !important;
+}
+
+.horizontaltext-before-line-fixed.title {
+    font-size: 2rem;
+    padding-left: 130px;
+}
+.wp-block-query-pagination{
+    justify-content: center !important;
+    gap: 0px !important;
+}
+.wp-block-query-pagination span{
+    font-weight: 600;
+}
+.wp-block-query-pagination a,.wp-block-query-pagination span{
+    margin: 0px 10px !important;
+    font-size: 24px;
+}
+.wp-block-query-pagination a.wp-block-query-pagination-next,.wp-block-query-pagination a.wp-block-query-pagination-previous{
+    font-size: 0px !important;
+}
+a.wp-block-query-pagination-next span{
+content:url('https://wealthapp.dotncube.in/wp-content/uploads/2023/05/arrow-right.png');    
+}
+a.wp-block-query-pagination-previous span{
+content:url('https://wealthapp.dotncube.in/wp-content/uploads/2023/05/arrow-left.png');    
+}
+.wp-block-query-pagination-numbers{
+    margin:0px !important;
+}
+.horizontaltext-before-line-fixed:before {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #526739;
+    position: relative;
+    top: 20px;
+    left: -130px;
+}
+
+.full-width{
+    width: 100%;
+    max-width: 100% !important;
+}
+
 @media (max-width: 992px) {
     .hide-mobile-tab{
         display: none;
     }
 }
+
 
 
 @media (max-width: 781px) {
@@ -2212,6 +2280,7 @@ transform: scale(1.8);
         top: 70%;
         left: 50%;
     }
+
     div.square{
         width: 200px;
         height: 200px;
