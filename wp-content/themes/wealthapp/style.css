@@ -565,7 +565,7 @@ font-size: 24px;
  .animate * .left-side .square1{
      animation: fadeInLeft;
      animation-duration: 1.5s;
- }
+}
 
 .animate * .left-side .square2{
     animation: fadeInLeft;
@@ -1311,7 +1311,7 @@ margin: 0px !important;
     width: 500px;
     height: 500px;
     position: absolute;
-    left: -20%;
+    left: -17.5%;
     top: calc(40% - 250px);
 }
 
@@ -1329,8 +1329,8 @@ margin: 0px !important;
 }
 
 #our-mission-vission .left-side .square2 img {
-    right: -5%;
-    margin-top: 20%;
+    right: -15%;
+    top: 20%;
 }
 
 
@@ -1338,35 +1338,12 @@ margin: 0px !important;
     width: 500px;
     height: 500px;
     position: absolute;
-    left: -20%;
+    left: -10%;
     top: calc(55% - 250px);
     transform: rotate(-5deg);
 }
 
 #our-top-advantages .right-side{
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    right: -25%;
-    top: 0%;
-}
-
-.square,.square1,.square2{
-    width: 100%;
-    max-width: 100%;
-    position: absolute;
-}
-
-#our-team .left-side{
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    left: -7.5%;
-    top: calc(55% - 250px);
-/*    transform: rotate(-5deg);*/
-}
-
-#our-team .right-side{
     width: 500px;
     height: 500px;
     position: absolute;
@@ -1376,7 +1353,6 @@ margin: 0px !important;
 
 
 
-<<<<<<< HEAD
 #our-team .left-side{
     width: 500px;
     height: 500px;
@@ -1401,13 +1377,6 @@ margin: 0px !important;
     top: 1%;
 }
 
-=======
-#our-team .right-side .square2 img {
-    right: -25%;
-    top: 1%;
-}
-
->>>>>>> 94ce93796c2dee41d734c2bc92aa3b982e9269e6
 #our-team .right-side img {
     width: 100%;
     position: absolute;
@@ -1500,8 +1469,7 @@ margin: 0px !important;
 }
 
 #gallery .right-side .square2 img{
-/*    top: 50%;*/
-    margin-top:50%;
+    top: 50%;
 }
 
 
@@ -1509,7 +1477,7 @@ margin: 0px !important;
     width: 300px;
     height: 300px;
     position: absolute;
-    left: -13%;
+    left: -7.5%;
     top: calc(85% - 350px);
     transform: rotate(-5deg);
 }
@@ -1528,8 +1496,8 @@ margin: 0px !important;
 }
 
 #career .left-side .square2 img{
-    right: -25%;
-    margin-top: -25px;
+    right: -10%;
+    top: 0%;  
 }
 
 #career .right-side img{
@@ -1537,7 +1505,7 @@ margin: 0px !important;
     width: 100%;
 }
 #career .right-side .square2 img {
-    right:-35%; /*right: -20%;*/
+    right: -20%;
     top: 0%;
 }
 
