@@ -359,6 +359,7 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
     left:0;
     width:100%;
     z-index: 99;
+    box-shadow: 0px 2px 5px 0px #0004;
 }
 .wp-site-blocks,.p-0 {
     padding: 0px !important;
@@ -1119,9 +1120,9 @@ a{
     display: block;
 }
 
-.blog-post-title{   
-    font-weight: bold;
-    font-size: 24px;
+.blog-post-title, .blog-post-title a{   
+    font-weight: 700;
+    font-size: 22px;
     margin-top: 10px !important;
 }
 
@@ -1974,7 +1975,7 @@ transform: scale(1.8);
 #top-block h2{
     text-transform: uppercase;
 }
-#blog_listing_block.section-block{
+#blog_listing_block.section-block,#blog-page.section-block{
 height: unset !important;
 }
 
@@ -2019,6 +2020,112 @@ content:url('https://wealthapp.dotncube.in/wp-content/uploads/2023/05/arrow-left
 .full-width{
     width: 100%;
     max-width: 100% !important;
+}
+.resouces_block_list{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: baseline;
+}
+#our-services .service-item.active{
+    background: #f4fbec;
+}
+
+.section-block #partition{
+    gap: 3rem;
+}
+.section-block #partition #blog-share{
+    width: 50px;
+    min-width: 50px;
+}
+
+.section-block #partition #blog-info{
+    width: 70%;
+}
+ 
+.section-block #partition #recent-blog{
+    width: 25%;
+}
+
+ul.vertical-social-media-links {
+    margin: 10px 0px 0px 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    list-style: none;
+    align-items: center;
+    gap: 1rem;
+}
+ul.vertical-social-media-links a{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    background: #cfe1b9;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+#recent-blog ul li figure{
+    margin-top:0px !important;
+}
+
+.small-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+.gap-0{
+    gap: 0 !important;
+}
+
+#blog-info .wp-block-post-content>*{
+    max-width: unset;
+}
+#blog-info .wp-block-post-content figure{
+    text-align: center;
+}
+#blog-info .wp-block-post-content img{
+    margin:auto;
+}
+
+
+#recent-blog .blog-post-shorttext .wp-block-post-excerpt__excerpt{
+margin-bottom: 0px;
+}
+
+#recent-blog a.play-btn:after, #recent-blog a.play-btn:before,.blog-item a.play-btn:after ,.blog-item a.play-btn:before {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #526739;
+    position: absolute;
+    top: calc(50% - -3px);
+    left: calc(50% - 3px);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-animation-delay: .9s;
+    animation-delay: .9s;
+    content: "";
+    position: absolute;
+    -webkit-box-shadow: 0 0 0 0 rgb(82, 103, 57);
+    box-shadow: 0 0 0 0 rgb(82, 103, 57);
+    -webkit-animation: ripple 3s infinite;
+    animation: ripple 3s infinite;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+#recent-blog a.play-btn img, .blog-item a.play-btn img{
+    position: absolute;
+    top: calc(50% - 9px);
+    left: calc(50% - 9px);
+    z-index: 999;
+    width: 18px !important;
+}
+a.play-btn{
+    margin: 0px;
 }
 
 @media (max-width: 992px) {
