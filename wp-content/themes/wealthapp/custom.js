@@ -265,8 +265,45 @@ if ($(window).width() > 781 ) {
             scrollSpeed: 1000,
             touchScroll:true
        });
-       add_animateclass()
+        add_animateclass()
        $servicelist.addClass('off');
+    }else{
+        if(!!window.IntersectionObserver){
+            console.log('initialize...');
+            const sections = document.querySelectorAll('.section-block');
+            var sections_options  = {threshold: .75}
+            var aligncenter = ['section-1','section-3','section-contact']
+            var scatter = ['section-2','section-4']
+
+            const sections_observer = new IntersectionObserver((entries, sectionsobserver) => { 
+                entries.forEach(entry => {
+                    let elem = entry.target;
+                    if(!entry.isIntersecting){
+                        elem.classList.remove('animate');
+                        elem.classList.remove('aligncenter'); 
+                        elem.classList.remove('scatter'); 
+                    }else if(entry.isIntersecting){
+                        elem.classList.add('animate'); 
+                        aligncenter.forEach(classname=>{
+                            if(elem.classList.contains(classname)){
+                                elem.classList.add('aligncenter'); 
+                            }
+                        });
+
+                        scatter.forEach(classname=>{
+                            if(elem.classList.contains(classname)){
+                                elem.classList.add('scatter'); 
+                            }
+                        });
+                    }
+                });
+            }, sections_options);
+            sections.forEach(elements=>{
+                sections_observer.observe(elements);
+            });
+        }else{
+            console.log('waring');
+        }
     }
     
     

@@ -359,7 +359,6 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
     left:0;
     width:100%;
     z-index: 99;
-    box-shadow: 0px 2px 5px 0px #0004;
 }
 .wp-site-blocks,.p-0 {
     padding: 0px !important;
@@ -386,8 +385,7 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
 .wp-block-group.bg-block{
     position: absolute;
     width: 100%!important;
-    height: 90vh;
-    top: 10vh;
+    height: 100vh;
     box-sizing: border-box;
     margin: 0px 0px !important;
     padding: 0px!important;
@@ -692,11 +690,15 @@ font-size: 24px;
     bottom: 30vh;
     right: calc(-5%);
 }
+.top-50{
+    top:50vh;
+}
 
 .center-left {
-    top: 30vh;
-							
+    top: 50vh;					
 }
+
+
 .horizontaltext-after-Verticalline{
    margin: 0px;
    display: inline-block;
@@ -1151,11 +1153,11 @@ a{
 .footer-bottom-text p, .footer-bottom-text div, .footer-bottom-text a {
     font-size: 14px!important;
 }
-
+/*
 .alignfull.m-0.footer-bottom-text{
     margin-bottom: 65px !important;
     padding-bottom:85px !important;
-}
+}*/
 
 .form-group-row {
     display: flex;
@@ -1204,6 +1206,7 @@ div#fix-bottom-menu nav ul li a{
 }
 header.bg{
     background: #f4fbec;
+    box-shadow: 0px 2px 5px 0px #0004;
 }
 header a{
     color:#526739
@@ -1254,36 +1257,83 @@ margin: 0px !important;
 }
 
 #top-block .left-side{
-    max-width: 500px;
+    width: calc(30vw);
     position: absolute;
     left: -20%;
-    top: calc(50% - 250px);
+    top: 0;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: center;
 }
 
 #top-block .right-side{
-  /*  width: 500px;
-    height: 500px;*/
-    max-width: 500px;
+    width: calc(30vw);
     position: absolute;
-    right: -3%;
-    top: calc(50% - 250px);
+    right: -10%;
+    padding: 0px;
+    top: 0;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: center;
 }
 
-#top-block .right-side img{
-    width: 100%;
-    position: absolute; 
+#top-block .right-side .square2 img{
+       width: 100%;
+    position: relative;
+    right: -25%;
 }
 
-#top-block .right-side .square2 img {
-    right: -40%;
-    top: 1%;
+#top-block .right-side .square2 {
+    margin: 0px !important;
+    position: absolute;
 }
 
 
+
+#top-block .right-side .square1{
+    position: absolute;
+}
+
+
+
+#top-block .triangle-block figure{
+    margin: 0px !important;
+}
+
+#top-block .triangle-block .wp-block-group {
+    margin: 0px;
+}
 
 #top-block .triangle-block{
-    transform: scale(1.5);
-    margin-top: -10vw;
+    width: 25vw;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transform: scale(1.25);
+}
+
+#top-block .triangle-block .triangle{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    gap:2vw;
+}
+#top-block .triangle-block .triangle .side-ele{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 2vw;;
+}
+
+#top-block .triangle-block .triangle img{
+    width: 100%;
+    position: relative;
+    left: unset;
+    top: unset;
+    right: unset;
 }
 
 #about-wealthapp .right-side{
@@ -1294,48 +1344,60 @@ margin: 0px !important;
     top: calc(50% - 275px);
 }
 
-#our-ups .left-side{
-    width: 500px;
-    height: 500px;
+#our-ups .left-side {
+    width: calc(40vw);
     position: absolute;
-    left: -25%;
-    top: calc(35% - 250px);
-
+    left: -20%;
+    top: -10%;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: center;
 }
 
-#our-ups .left-side img{
-    width: 100%;
-    position: absolute; 
-}
 
 
-
-
-#our-mission-vission .left-side{
-    width: 500px;
-    height: 500px;
+#our-mission-vission .right-side {
+    width: calc(30vw);
     position: absolute;
-    left: -17.5%;
-    top: calc(40% - 250px);
+    right: -20%;
+    padding: 0px;
+    top: 0;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: center;
 }
 
-#our-mission-vission .right-side{
-    width: 500px;
-    height: 500px;
+
+
+
+#our-mission-vission .left-side {
+    width: calc(30vw);
     position: absolute;
-    right: -12.5%;
-    top: calc(50% - 250px);
+    left: -10%;
+    top: 0;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: center;
 }
 
-#our-mission-vission .left-side img{
-    width: 100%;
-    position: absolute; 
+#our-mission-vission .left-side .square1 {
+    position: absolute;
+}
+
+#our-mission-vission .left-side .square2 {
+    margin: 0px !important;
+    position: absolute;
+    margin-top: 40% !important;
 }
 
 #our-mission-vission .left-side .square2 img {
-    right: -15%;
-    top: 20%;
+    width: 100%;
+    position: relative;
 }
+
 
 
 #our-top-advantages .left-side{
@@ -1358,43 +1420,72 @@ margin: 0px !important;
 
 
 #our-team .left-side{
-    width: 500px;
-    height: 500px;
+    width: calc(30vw);
     position: absolute;
-    left: -10%;
-    top: calc(55% - 250px);
-/*    transform: rotate(-5deg);*/
+    left: 2vw;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: center;
+    top: 15%;
 }
 
-#our-team .right-side{
-    width: 500px;
-    height: 500px;
+#our-team .left-side .square1 {
     position: absolute;
-    right: -17.5%;
-    top: 0%;
 }
 
-
-
-#our-team .right-side .square2 img {
-    right: -20%;
-    top: 1%;
-}
-
-#our-team .right-side img {
-    width: 100%;
+#our-team .left-side .square2 {
+    margin: 0px !important;
     position: absolute;
+    left: 0vw;
 }
 
 #our-team .left-side .square2 img {
-    right: -50%;
-    top: 1%;
+    width: 100%;
+    position: relative;
 }
 
-#our-team .left-side img {
+.animate * .right-side .square2{
+ margin: 0px;
+}
+
+
+
+
+#our-team .right-side{
+    width: calc(30vw);
+    position: absolute;
+    right: -30%;
+    padding: 0px;
+    top: 10%;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: start;
+}
+
+#our-team .right-side .square2 img{
     width: 100%;
+    position: relative;
+    right: 25%;
+}
+
+#our-team .right-side .square2 {
+    margin: 0px !important;
     position: absolute;
 }
+
+
+
+#our-team .right-side .square1{
+    position: absolute;
+}
+
+
+
+
+
+
 
 
 #office-culture .left-side{
@@ -1456,70 +1547,154 @@ margin: 0px !important;
 }
 
 #gallery .right-side{
-    width: 500px;
-    height: 500px;
+    width: calc(30vw);
     position: absolute;
+    right: -15vw;
+    padding: 0px;
     top: 0;
-    right: -20%;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: start;
 }
 
-#gallery .right-side img{
-    position: absolute;
-    width: 100%;
-}
-
-#gallery .right-side .square1 img{
-    right: -10%;
-}
 
 #gallery .right-side .square2 img{
-    top: 50%;
+    width: 100%;
+    position: relative;
 }
 
-
-#career .left-side{
-    width: 300px;
-    height: 300px;
+#gallery .right-side .square2 {
+    margin: 0px !important;
     position: absolute;
-    left: -7.5%;
-    top: calc(85% - 350px);
-    transform: rotate(-5deg);
+    right: -7.5vw;
+    top: 25%;
 }
 
-#career .right-side{
+
+
+#gallery .right-side .square1{
+    position: absolute;
+    right: -10vw;
+}
+
+
+
+#career .left-side {
+    width: calc(15vw);
+    position: absolute;
+    left: -5vw;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    bottom: 3vw;
+    align-items: end;
+    padding: 0px !important;
+}
+
+/*#career .right-side{
     width: 500px;
     height: 500px;
     position: absolute;
     top: calc(75% - 200px);
     right: -15%;
 }
+*/
 
-#career .left-side img{
-    position: absolute;    
-    width: 100%;
+#career .left-side .square1 {
+    position: absolute;
 }
 
-#career .left-side .square2 img{
-    right: -10%;
-    top: 0%;  
+#career .left-side .square2 {
+    margin: 0px !important;
+    position: absolute;
+}
+#career .left-side .square2 img {
+    width: 100%;
+    position: relative;
+    left: 5vw;
 }
 
-#career .right-side img{
-    position: absolute;    
-    width: 100%;
+#career .right-side {
+    width: calc(30vw);
+    position: absolute;
+    right: -15vw;
+    padding: 0px;
+    bottom: -5vw;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: end;
+}
+
+#career .right-side .square1 {
+    position: absolute;
+}
+
+#career .right-side .square2 {
+    margin: 0px !important;
+    position: absolute;
 }
 #career .right-side .square2 img {
-    right: -20%;
-    top: 0%;
+    width: 100%;
+    position: relative;
+    right: -10vw;
 }
 
-
-/*#top-block .left-side .square {
+#contact-us-about .right-side {
+    width: calc(30vw);
     position: absolute;
-    top: 22.5vh;
-    left: -20vw
+    right: 5vw;
+    padding: 0px;
+    bottom: -10vw;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: end;
 }
-*/
+
+
+#contact-us-about .right-side .square1 {
+    position: absolute;
+    right: unset;
+    top: unset;
+}
+
+#contact-us-about .right-side .square2 {
+    margin: 0px !important;
+    position: absolute;
+    max-width: 100%;
+    top: unset;
+    right: unset;
+}
+#contact-us-about .right-side .square2 img {
+    width: 100%;
+    position: relative;
+    right: -10vw;
+    bottom: -3vw;
+}
+
+
+#contact-us-about .left-side {
+    width: calc(25vw);
+    position: absolute;
+    left: -10vw;
+    padding: 0px;
+    bottom: 0vw;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: center;
+}
+
+
+#contact-us-about .left-side .square {
+    position: absolute;
+    left: unset;
+    top: unset;
+}
+
+
 #top-block:before{
 left:20vw;
 }
@@ -1527,20 +1702,6 @@ left:20vw;
 #top-block:after{
 right:20vw;
 }
-/*
-#top-block .right-side .square2 {
-    position: absolute;
-    top: 20vh;
-    right: -22.5vw;
-}
-
-#top-block .right-side .square1 {
-    position: absolute;
-    top: 22.5vh;
-    right: -17.5vw;
-}*/
-
-
 
 .testimonial .owl-dots,.blog-carousel .owl-dots{
     width: 90vw;
@@ -1556,13 +1717,13 @@ right:20vw;
 }
 
 #top-block h2,#top-block h2 strong{
-    font-size: 4vw;
+    font-size: 3.5vw;
 }
 
 #top-block .wp-block-group.bg-block {
     position: absolute;
     width: 100%!important;
-    height: 100vh;
+    height: 100%!important;
     box-sizing: border-box;
     margin: 0px 0px !important;
     padding: 0px!important;
@@ -1599,7 +1760,7 @@ right:20vw;
     position: relative;
 }
 
-.office-culture .item .img-area{
+/*.office-culture .item .img-area{
     width: 60%;
     position: relative;
     text-align: center;
@@ -1619,6 +1780,29 @@ right:20vw;
     z-index: -1;
     top: calc(50% - 175px);
     left: 50%;
+}*/
+
+.office-culture .item .img-area {
+    width: 60%;
+    position: relative;
+    text-align: center;
+    float: right;
+    max-width: 50%;
+}.office-culture .item .img-area img {
+    max-width: 60%;
+    margin: 5vw 5vw 5vw 4vw;
+}
+.office-culture .item .img-area .l-square {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #cfe1b9;
+    z-index: -1;
+    top: 6vw;
+    max-width: 21vw;
+    max-height: 21vw;
+    right: 5vw;
+    left: unset;
 }
 
 .wp-block-group.block-flex-relative{
@@ -1649,7 +1833,7 @@ right:20vw;
     position: relative;
 }
 
-.awards .item .img-area{
+/*.awards .item .img-area{
     width: 60%;
     position: relative;
     text-align: center;
@@ -1670,6 +1854,32 @@ right:20vw;
     top: calc(50% - 175px);
     left: 50%;
 }
+*/
+
+.awards .item .img-area {
+    width: 60%;
+    position: relative;
+    text-align: center;
+    float: right;
+    max-width: 50%;
+}
+.awards .item .img-area img {
+    max-width: 60%;
+    margin: 5vw 5vw 5vw 4vw;
+}
+.awards .item .img-area .d-square {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #526739;
+    z-index: -1;
+    top: 6vw;
+    max-width: 21vw;
+    max-height: 21vw;
+    right: 5vw;
+    left:unset;
+}
+
 
 .awards .owl-dots,.gallery .owl-dots{
     width: 90%;
@@ -1977,6 +2187,10 @@ transform: scale(1.8);
 }
 #blog_listing_block.section-block,#blog-page.section-block{
 height: unset !important;
+padding: 5%;
+}
+.of-show{
+overflow: visible !important;
 }
 
 .horizontaltext-before-line-fixed.title {
@@ -2027,7 +2241,7 @@ content:url('https://wealthapp.dotncube.in/wp-content/uploads/2023/05/arrow-left
     gap: 2rem;
     align-items: baseline;
 }
-#our-services .service-item.active{
+#our-services .service-item.active,#our-services .owl-item:has(active) .service-item {
     background: #f4fbec;
 }
 
@@ -2124,10 +2338,295 @@ margin-bottom: 0px;
     z-index: 999;
     width: 18px !important;
 }
+
 a.play-btn{
     margin: 0px;
 }
+.taxonomy-post_tag span.wp-block-post-terms__separator{
+    display: none;
+}
 
+#top-block h1.title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.taxonomy-post_tag{
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: start;
+
+}
+.taxonomy-post_tag a{
+    margin: 5px 5px;
+    padding: 10px 15px;
+    background: #cfe1b9;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: .8rem;
+    font-size: .8rem;
+    display: inline-block;
+}
+
+
+#blog-card-list .left-side {
+    width: calc(30vw);
+    position: absolute;
+    left: -10%;
+    bottom: -24%;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: end;
+}
+
+#blog-card-list .left-side .square1 {
+    position: absolute;
+}
+
+#blog-card-list .left-side .square2 {
+    margin: 0px !important;
+    position: absolute;
+    bottom: -15%;
+}
+
+#blog-card-list .left-side .square2 img {
+    width: 100%;
+    position: relative;
+}
+
+
+
+#video-card-list .left-side {
+    width: calc(30vw);
+    position: absolute;
+    left: -10%;
+    top: -10%;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: start;
+}
+
+#video-card-list .left-side .square1 {
+    position: absolute;
+}
+
+#video-card-list .left-side .square2 {
+    margin: 0px !important;
+    position: absolute;
+    top: -15%;
+}
+
+#video-card-list .left-side .square2 img {
+    width: 100%;
+    position: relative;
+}
+
+
+
+#centertriangle.triangle-block figure{
+    margin: 0px !important;
+}
+
+#centertriangle.triangle-block .wp-block-group {
+    margin: 0px;
+}
+
+#centertriangle.triangle-block{
+    width: 25vw;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transform: scale(1.25);
+    margin: auto;
+}
+
+#centertriangle.triangle-block .triangle{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    gap:2vw;
+}
+#centertriangle.triangle-block .triangle .side-ele{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 2vw;;
+}
+
+#centertriangle.triangle-block .triangle img{
+    width: 100%;
+    position: relative;
+    left: unset;
+    top: unset;
+    right: unset;
+}
+
+
+#video-card-list .right-side{
+    width: calc(30vw);
+    position: absolute;
+    right: -15%;
+    padding: 0px;
+    top: 0;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: end;
+}
+
+#video-card-list .right-side .square1{
+    position: absolute;
+}
+
+#scatter.triangle{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    margin: 0px !important;
+    position: absolute;
+}
+#scatter.triangle .top img{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin: 0px;
+    scale: 1;
+    transition:all .40s linear;
+}
+
+/*#scatter.triangle .left img{
+    position: absolute;
+    top: 75%;
+    left: 25%;
+    margin: 0px;
+    scale: 1;
+    transition: all .40s linear;
+    transform: rotate(-25deg);
+}*/
+
+
+#scatter.triangle .left img{
+    position: absolute;
+    top: 65%;
+    left: 10%;
+    margin: 0px;
+    scale: 1;
+    transition: all .40s linear;
+    transform: rotate(-25deg);
+}
+
+
+    
+
+#scatter.triangle .right img{
+    position: absolute;
+    top: 65%;
+    right: 15%;
+    margin: 0px;
+    scale: 1;
+    transition: all .40s linear;
+    transform: rotate(25deg);
+}
+
+#our-services .right-side {
+    width: calc(30vw);
+    position: absolute;
+    right: -10%;
+    bottom: 0%;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: end;
+}
+
+#our-services .right-side .square1 {
+    position: absolute;
+}
+
+#our-services .right-side .square2 {
+    margin: 0px !important;
+    position: absolute;
+    bottom: -15%;
+}
+
+#our-services .right-side .square2 img {
+    width: 100%;
+    position: relative;
+}
+
+#left-center.left-side {
+    width: calc(40vw);
+    position: absolute;
+    left: -20%;
+    top: 0;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: center;
+}
+
+#right-bottom.right-side {
+    width: calc(25vw);
+    position: absolute;
+    right: -5%;
+    bottom: 5%;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: end;
+}
+
+#about-wealthapp #scatter.triangle .right img {
+    position: absolute;
+    top: 65%;
+    right: 25%;
+    margin: 0px;
+    scale: 1;
+    transition: all .40s linear;
+    transform: rotate(45deg);
+}
+
+
+#about-wealthapp .right-side {
+    width: calc(30vw);
+    position: absolute;
+    right: 5%;
+    padding: 0px;
+    top: 0;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: center;
+}
+
+
+#service-list .service-item{
+    background: #cfe1b9;
+    padding: 20px;
+    position: relative;
+}
+
+#service-list .service-item.active{
+    background: #f4fbec;
+    box-shadow: 0px 2px 5px 0px #0004;
+}
+
+#service-list .service-item p.description{
+    border-top: 1px solid #526739;
+    padding: 15px 0px;
+    margin: 0px;
+}
+#service-list .service-item p.number{
+    font-size: 5vw;
+    font-weight: 900;
+    position: absolute;
+    left: 15px;
+    top: 0;
+    color: #cfe1b9;
+}
 @media (max-width: 992px) {
     .hide-mobile-tab{
         display: none;
@@ -2275,6 +2774,7 @@ a.play-btn{
         top: -125px;
         right: -400px;
     }
+
     .section-2 .triangle .right img, .section-4 .triangle .right img{
         right: calc(50% - 150px);
     }
@@ -2295,8 +2795,10 @@ a.play-btn{
     .scatter .triangle .left img {
         left: 5%;
     }
+
     .service-item .service-text{
         display: block;
+        opacity: 1;
     }
     .service-item {
         background-image: linear-gradient(to right, #cfe1b9 75%, #cfe1b900 25%);
@@ -2318,6 +2820,21 @@ a.play-btn{
     .wp-block-columns.header-menu:not(.is-not-stacked-on-mobile)>.wp-block-column {
         display: contents;
     }
+    
+    .form-group-row {
+        flex-direction: column;
+    }
+    .section-block {
+        height: unset !important;
+        padding: 5% !important;
+    }
+    .resouces_block_list{
+        flex-direction: column;
+    }
+    ul.resouces_block_list li figure{
+        margin-top:0px !important;
+    }
+
 
     
 
@@ -2327,7 +2844,7 @@ a.play-btn{
 
 
 @media (max-width: 600px) {
-
+  
  }
 
 
