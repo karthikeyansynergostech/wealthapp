@@ -1870,16 +1870,11 @@ background: #cfe1b9;
 
 
 
-.section-4 .right-side .square{
-
+.section-4 .right-side .square {
     position: absolute;
-
-    top: calc(50vh - 375px);
-
-    right: calc((66% /2) - 325px);
-
+    top: calc(50vh - 275px);
+    right: calc((66% /2) - 350px);
     margin: 0px;
-
 }
 
 
@@ -2263,13 +2258,10 @@ a{
 
 
 .blog-post-title, .blog-post-title a{   
-
     font-weight: 700;
-
     font-size: 22px;
-
     margin-top: 10px !important;
-
+    margin-bottom: 15px;
 }
 
 
@@ -4199,305 +4191,196 @@ transform: scale(1.8);
 
 
 .team-slider {
-
     width: calc((80vw - 16px ));
-
-    
-
     display: block;
-
     overflow: hidden;
-
 }
 
 
 
 .team-slider .item{
-
     margin: 3rem 0px;
-
 }
 
 
 
 .team-slider .item .item-content .image-block{
-
     width: 40%;
-
     display: flex;
-
     justify-content: end;
-
 }
 
 
 
 .team-slider .item .item-content .image-block img{
-
     max-width: 100%;
-
     width: auto;
-
 }
 
 
 
 .team-slider .item .item-content .info-block{
-
     width: 40%;
-
     display: flex;
-
     flex-direction: column;
-
     margin-top: 50px;
-
 }
 
 
 
 .team-slider .item .item-content{
-
     display: flex;
-
     gap: 3rem;
-
     flex-direction: row;
-
     justify-content: start;
-
 }
 
 
 
 .team-slider .item .item-content p{
-
    margin: 0px;
-
 }
 
 
 
 .team-slider .item .item-content .info-block .name{
-
     font-size: 2rem;
-
     font-weight: 600;
-
-
-
 }
 
 
 
 .team-slider .item .item-content .info-block .designation{
-
     font-size: 1.5rem;
-
     font-weight: 600;
-
     margin-bottom: 10px;
-
 }
 
 
 
 .team-slider .owl-nav .owl-prev span{
-
     content: url('https://wealthapp.dotncube.in/wp-content/uploads/2023/05/arrow-left.png');
-
 }
 
 .team-slider .owl-nav .owl-next span{
-
     content: url('https://wealthapp.dotncube.in/wp-content/uploads/2023/05/arrow-right.png');
-
 }
 
 .team-slider .owl-nav{
-
     position: absolute;
-
     bottom: 3rem;
-
     right: 30%;
-
 }
 
 .slide_pagination{
-
     padding: 0px 20px;
-
     font-size: 2rem;
-
     width: 100px;
-
     text-align: center;
-
     max-width: 100px;
-
     display: inline-block;
-
     line-height: 40px;
-
 }
 
 .slide_pagination strong{
-
     font-size: 4rem;
-
     font-weight: 300;
-
 }
 
 #address-block{
-
     padding: 100px 0px 100px var(--wp--custom--spacing--outer);
-
 }
 
 #address-block .gmap-block iframe{
-
     height: 80vh;
-
 }
 
 #address-block .info p, #address-block .info a{
-
     font-size: 1.25rem;
-
 }
 
 .bw-image img.attachment-post-thumbnail{
-
     filter: grayscale(1);
-
     transition: all .5s;
-
 }
 
 .bw-image:hover img.attachment-post-thumbnail{
-
     filter: unset;
-
 }
 
 #top-block h2{
-
     text-transform: uppercase;
-
 }
 
 #blog_listing_block.section-block,#blog-page.section-block{
-
     height: unset !important;
-
     padding: 5%;
-
 }
 
 .of-show{
-
     overflow: visible !important;
-
 }
 
 
 
 .horizontaltext-before-line-fixed.title {
-
     font-size: 2rem;
-
     padding-left: 130px;
-
 }
 
 .wp-block-query-pagination{
-
     justify-content: center !important;
-
     gap: 0px !important;
-
 }
 
 .wp-block-query-pagination span{
-
     font-weight: 600;
-
 }
 
 .wp-block-query-pagination a,.wp-block-query-pagination span{
-
     margin: 0px 10px !important;
-
     font-size: 24px;
-
 }
 
 .wp-block-query-pagination a.wp-block-query-pagination-next,.wp-block-query-pagination a.wp-block-query-pagination-previous{
-
     font-size: 0px !important;
-
 }
 
 a.wp-block-query-pagination-next span{
-
     content:url('https://wealthapp.dotncube.in/wp-content/uploads/2023/05/arrow-right.png');    
-
 }
 
 a.wp-block-query-pagination-previous span{
-
     content:url('https://wealthapp.dotncube.in/wp-content/uploads/2023/05/arrow-left.png');    
-
 }
 
 .wp-block-query-pagination-numbers{
-
     margin:0px !important;
-
 }
 
 .horizontaltext-before-line-fixed:before {
-
     content: "";
-
     display: block;
-
     width: 120px;
-
     height: 1px;
-
     background: #526739;
-
     position: relative;
-
     top: 20px;
-
     left: -130px;
-
 }
 
 
 
 .full-width{
-
     width: 100%;
-
     max-width: 100% !important;
-
 }
 
 .resouces_block_list{
-
     display: flex;
-
     justify-content: center;
-
     gap: 2rem;
-
     align-items: baseline;
-
 }
 
 #our-services .service-item.active,#our-services .owl-item:has(active) .service-item {
@@ -5231,8 +5114,50 @@ a.play-btn{
 }
 
 
+#service-list .right-side {
+    width: calc(30vw);
+    position: absolute;
+    right: -15%;
+    padding: 0px;
+    top: 5%;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: center;
+}
 
 
+
+
+#service-list #scatter.triangle .right img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0px;
+    scale: 1;
+    transition: all .40s linear;
+    transform: rotate(25deg);
+}
+
+
+#service-list #scatter.triangle .left img {
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    margin: 0px;
+    scale: 1;
+    transition: all .40s linear;
+    transform: unset;
+}
+
+#service-list #scatter.triangle .top img {
+    position: absolute;
+    top: 9%;
+    left: 50%;
+    margin: 0px;
+    scale: 1;
+    transition: all .40s linear;
+}
 
 #service-list .service-item{
 
@@ -5532,26 +5457,225 @@ table.tax-new td input{
     border: none;
 }
 .transparent-btn img{
-padding-left: 5px;
+    padding-left: 5px;
 }
 
-@media (max-width: 992px) {
+.custom-section-block{
+    width: 100vw;
+    height: 100%;
+    padding-top: 100px;
+    display: block;
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 
-    .hide-mobile-tab{
+}
 
-        display: none;
+#wealth-management-body .bg-block{
+    position: absolute;
+    width: 90%!important;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0px 0px !important;
+    padding: 0px!important;
+    z-index: -1;
+    display: contents; 
+}
 
+#wealth-management-body #scatter.triangle {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0px !important;
+    position: absolute;
+}
+
+
+
+#wealth-management-body #scatter.triangle .right img {
+    position: absolute;
+    top: calc(50% - 125px);
+    margin: 0px;
+    scale: 1;
+    transition: all .40s linear;
+    transform: unset;
+    right: 35%;
+}
+
+#wealth-management-body #scatter.triangle .top img {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    margin: 0px;
+    scale: 1;
+    transition: all .40s linear;
+}
+
+
+#wealth-management-body .right-side {
+    width: calc(30vw);
+    position: absolute;
+    right: 0%;
+    padding: 0px;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: end;
+    bottom: 0;
+}
+
+.custom-section-block .bg-block{
+    width:90%!important
+}
+
+
+#wealth-management-body .left-side {
+    width: calc(40vw);
+    position: absolute;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: center;
+    left: 7.5%;
+    margin-top: -50px;
+}
+
+#nri-body .right-side {
+    width: calc(40vw);
+    position: absolute;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: start;
+    right: 0;
+    top: -50px;
+}
+
+#nri-body .right-side-1 {
+    width: calc(30vw);
+    position: absolute;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: center;
+    right: -25%;
+    top: -100px;
+}
+
+#nri-body #scatter.triangle .left img {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    margin: 0px;
+    scale: 1;
+    transition: all .40s linear;
+    transform: unset;
+}
+
+#nri-body-2 #scatter.triangle .right img {
+    position: absolute;
+    top: -100px;
+    right: 25%;
+    margin: 0px;
+    scale: 1;
+    transition: all .40s linear;
+    transform: unset;
+}
+
+#nri-body-2 .left-side {
+    width: calc(40vw);
+    position: absolute;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: start;
+    left: -18%;
+    top: -50px;
+}
+
+.left-drag{
+    width: 120%;
+    margin: 0px -20%;
+}
+#thankyou-block.custom-section-block .bg-block {
+    height: 100% !important;
+    margin-top: -10% !important;
+}
+#thankyou-block #scatter.triangle .top{
+    position: absolute;
+    top: 0;
+    left: 25%;
+    margin: 0px;
+    scale: 1;
+    transition: all .40s linear;
+    transform: unset;
+}
+
+#thankyou-block #scatter.triangle .left{
+    position: absolute;
+    bottom: 0%;
+    left: 5%;
+    margin: 0px;
+    scale: 1;
+    transition: all .40s linear;
+    transform: unset;
+}
+
+#thankyou-block #scatter.triangle .right{
+    position: absolute;
+    bottom: 0%;
+    right: 5%;
+    margin: 0px;
+    scale: 1;
+    transition: all .40s linear;
+    transform: unset;
+}
+
+#thankyou-block #scatter.triangle{
+    height: 100%;
+}
+
+
+@media only screen and (max-width: 1366px) {
+    #wealth-management-body .left-side {
+        width: calc(50vw);
+        position: absolute;
+        display: flex;
+        height: 100%;
+        margin: 0;
+        align-items: center;
+        left: 0%;
+        margin-top: -50px;
+    }
+
+
+    #nri-body .right-side {
+        right: 5%;
+    }
+
+    #nri-body .right-side-1{
+        width: calc(40vw);
+        right: -27%;
+        top: -15px
+    }
+
+
+
+    #nri-body-2 .left-side {
+        left: -11%;
     }
 
 }
 
+@media only screen and (max-width: 992px) {
+    .hide-mobile-tab{
+        display: none;
+    }
+}
 
-
-
-
-
-
-@media (max-width: 781px) {
+@media only screen and (max-width: 781px) {
 
     .section-contact .left-side * img , .section-blog .left-side * img {
 
@@ -5967,7 +6091,7 @@ ul.resouces_block_list li figure{
 
 
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
 
 
 
@@ -5979,7 +6103,7 @@ ul.resouces_block_list li figure{
 
 
 
-@media (max-width: 480px) {
+@media only screen and (max-width: 480px) {
 
     .home-top-text .l-3{
 
@@ -6170,32 +6294,3 @@ ul.resouces_block_list li figure{
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

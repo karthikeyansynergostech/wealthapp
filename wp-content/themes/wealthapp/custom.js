@@ -253,7 +253,6 @@ function device_resolution(){
 }
 
 $(document).ready(function(){
-    
 if ($(window).width() > 781 ) {
     console.log();
     if($('#disable_scrollify').length==0){
