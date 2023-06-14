@@ -560,3 +560,9 @@ jQuery(document).on('blur','.form-field-validate',function(){
         jQuery(this).closest('.form-group').find('.error_txt').html("");
     }
 });
+
+
+$(document).on('change','.tax-scheme',function(){
+    $(".tab-content").removeClass('active');
+    $("#"+$(this).val()).addClass('active');
+})
