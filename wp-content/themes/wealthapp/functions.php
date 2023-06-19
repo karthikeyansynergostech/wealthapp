@@ -230,37 +230,91 @@ require get_template_directory() . '/inc/block-patterns.php';
 
 function custom_javascript() { ?>
 
-   
-
+	<link rel="stylesheet" href='https://wealthapp.dotncube.in/wp-content/themes/wealthapp/assets/plugin/fancybox/fancybox.css'>
    <script src='https://wealthapp.dotncube.in/wp-content/themes/wealthapp/assets/js/jquery-3.6.4.min.js'></script>
-
    <script src='https://wealthapp.dotncube.in/wp-content/themes/wealthapp/assets/plugin/scrollify.min.js'></script>
-
    <script src='https://wealthapp.dotncube.in/wp-content/themes/wealthapp/assets/plugin/owl.carousel.min.js'></script>
-
-   <!-- <script src='https://wealthapp.dotncube.in/wp-content/themes/wealthapp/assets/plugin/flexslider.js'></script> -->
-
    <script src='https://wealthapp.dotncube.in/wp-content/themes/wealthapp/custom.js'></script>
+   <!-- <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script> -->
+
+   <script src='https://wealthapp.dotncube.in/wp-content/themes/wealthapp/assets/plugin/fancybox/fancybox.js'></script>
    <script src="https://www.google.com/recaptcha/api.js?render=6LfDspYmAAAAABVKqFBf1bij5edMS7pGjCeMEPNn"></script>
 
    <script>
-      var bf_form = document.getElementById('bf-recaptcha');
-      if(bf_form){
-         grecaptcha.ready(function() {
-	        	grecaptcha.execute('6LfDspYmAAAAABVKqFBf1bij5edMS7pGjCeMEPNn', {action:'validate_captcha'}).then(function(token) {
-	            	document.getElementById('bf-recaptcha').value = token;
-	        	});
-    		});
-      }
+   	var load_captcha_status =false;
+   	function load_captcha(){
+   		if(load_captcha_status==false){
+   			var head = document.getElementsByTagName('head')[0];
+				var script = document.createElement('script');
+				script.type = 'text/javascript';
+				script.src = "https://www.google.com/recaptcha/api.js?render=6LfDspYmAAAAABVKqFBf1bij5edMS7pGjCeMEPNn";
+				head.appendChild(script);
+				script.onload = function() {
+	   			load_captcha_status = true;
+	   			var bf_form = document.getElementById('bf-recaptcha');
+			      if(bf_form){
+			         grecaptcha.ready(function() {
+				        	grecaptcha.execute('6LfDspYmAAAAABVKqFBf1bij5edMS7pGjCeMEPNn', {action:'validate_captcha'}).then(function(token) {
+				            	document.getElementById('bf-recaptcha').value = token;
+				        	});
+			    		});
+			      }
 
-      var sf_form = document.getElementById('sf-recaptcha');
-      if(sf_form){
-         grecaptcha.ready(function() {
-	        	grecaptcha.execute('6LfDspYmAAAAABVKqFBf1bij5edMS7pGjCeMEPNn', {action:'validate_captcha'}).then(function(token) {
-	            	document.getElementById('sf-recaptcha').value = token;
-	        	});
-	 		});
-      }          
+			      var sf_form = document.getElementById('sf-recaptcha');
+			      if(sf_form){
+			         grecaptcha.ready(function() {
+				        	grecaptcha.execute('6LfDspYmAAAAABVKqFBf1bij5edMS7pGjCeMEPNn', {action:'validate_captcha'}).then(function(token) {
+				            	document.getElementById('sf-recaptcha').value = token;
+				        	});
+				 		});
+			      }
+
+			      var pf_form = document.getElementById('pf-recaptcha');
+			      if(pf_form){
+			         grecaptcha.ready(function() {
+				        	grecaptcha.execute('6LfDspYmAAAAABVKqFBf1bij5edMS7pGjCeMEPNn', {action:'validate_captcha'}).then(function(token) {
+				            	document.getElementById('pf-recaptcha').value = token;
+				        	});
+				 		});
+			      }
+			      var cf_form = document.getElementById('cf-recaptcha');
+			      if(cf_form){
+			         grecaptcha.ready(function() {
+				        	grecaptcha.execute('6LfDspYmAAAAABVKqFBf1bij5edMS7pGjCeMEPNn', {action:'validate_captcha'}).then(function(token) {
+				            	document.getElementById('cf-recaptcha').value = token;
+				        	});
+				 		});
+			      }
+
+			   }   
+   		}
+   	}
+
+   	$(window).on('load',function() {
+   		setTimeout(setTimeout(load_captcha, 5000));
+		});
+
+		// $(window).load(function() {
+   	// 	setTimeout(setTimeout(load_captcha, 5000));
+		// });
+
+		$('body').one('mousemove', function() { 
+			load_captcha()
+		 });
+
+		$(document).on('click','#fancybox-close',function(){
+			$('body').removeClass('stop-scroll');
+		});
+		$(document).on('click','.iframe',function(){
+			$('body').addClass('stop-scroll');
+		});
+		
+		$(".various").fancybox({
+			'transitionIn'	: 'none',
+			'transitionOut'	: 'none'
+		});
+		
+            
   </script>
 
 

@@ -540,9 +540,10 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
 
 	padding:5px;
 
-    max-width: 450px;
+/*    max-width: 450px;*/
 
 }
+
 
 .subscribe-group .input-group>.first-block{
 
@@ -701,6 +702,7 @@ padding-top:4px;
     display: table-cell;
 
     vertical-align: middle;
+        padding-top: 100px;
 
 }
 
@@ -1370,46 +1372,40 @@ p.small{
 
 }
 
-
-
-.horizontaltext-after-line.title{
-
-    font-size: 2rem;
-
+.hide{
+    display: none;
 }
 
-
+.horizontaltext-after-line.title{
+    font-size: 2rem;
+    padding-left: 120px;
+    text-align: left;
+}
+#what-we-do .horizontaltext-after-line:before{
+    top: 30px;
+    margin-left:-120px;
+}
 
 #about-wealthapp .horizontaltext-after-line:before{
-
-    width: calc(20%);
-
     top: 20px;
-
+    margin-left:-120px;
 }
 
 
 
 .bottom-right{
-
     bottom: 30vh;
-
     right: calc(-5%);
-
 }
 
 .top-50{
-
     top:50vh;
-
 }
 
 
 
 .center-left {
-
     top: 50vh;					
-
 }
 
 
@@ -1482,7 +1478,7 @@ p.small{
 
     display: block;
 
-    width: calc(100% - 230px - 10px);
+    width: 120px;
 
     height: 1px;
 
@@ -2340,15 +2336,30 @@ a{
 
 
 
-.form-group-row .form-group-3 , .form-group-row .form-group-1{
-
+.form-group-row .form-group-3, .form-group-row .form-group-2, .form-group-row .form-group-1{
     width: 100%;
-
     display: inline-flex;
-
+        background: #fff;
 }
 
-
+input[type=file]{
+     height: 1px;
+    padding: 0px;   
+}
+.file-block{
+    flex-direction: column;
+    gap: 0px;
+}
+.file-block .file-btn a{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    padding: 10px;
+    align-items: baseline;
+    box-sizing: border-box;
+}
 
 textarea{
 
@@ -2419,11 +2430,8 @@ div#fix-bottom-menu nav ul li a{
 }
 
 header.bg{
-
     background: #f4fbec;
-
     box-shadow: 0px 2px 5px 0px #0004;
-
 }
 
 header a{
@@ -3857,6 +3865,14 @@ footer .footer-title{
     align-items: center !important;
 
 }
+.grayscale img{
+    filter: grayscale(1);
+    transition: all .5s;
+}
+.grayscale:hover img, .center img{
+    filter: grayscale(0);
+}
+
 
 .certificate-list .wp-block-column img{
 
@@ -3893,6 +3909,11 @@ footer .footer-title{
 }
 
 
+#resources .heading-block{
+    max-width: CALC((90VW)*.94);
+    width: 100%;
+    padding-bottom: 20px;
+}
 
 
 
@@ -5603,17 +5624,17 @@ table.tax-new td input{
     height: 100% !important;
     margin-top: -10% !important;
 }
-#thankyou-block #scatter.triangle .top{
+#thankyou-block #scatter.triangle .top img{
     position: absolute;
-    top: 0;
-    left: 25%;
+    top: 20%;
+    left: 45%;
     margin: 0px;
     scale: 1;
     transition: all .40s linear;
-    transform: unset;
+    transform: rotate(25deg);
 }
 
-#thankyou-block #scatter.triangle .left{
+#thankyou-block #scatter.triangle .left img{
     position: absolute;
     bottom: 0%;
     left: 5%;
@@ -5623,7 +5644,7 @@ table.tax-new td input{
     transform: unset;
 }
 
-#thankyou-block #scatter.triangle .right{
+#thankyou-block #scatter.triangle .right img{
     position: absolute;
     bottom: 0%;
     right: 5%;
@@ -5635,8 +5656,185 @@ table.tax-new td input{
 
 #thankyou-block #scatter.triangle{
     height: 100%;
+    max-width: calc(var(--wp--style--global--content-size) + 20%);
+    margin-left: calc(45vw - ((var(--wp--style--global--content-size) + 20% )/2)) !Important;
 }
 
+
+/*#search-block.show{
+    top:90px;
+}*/
+#thankyou-block hr{
+    margin-top: 0px;
+    width: 40%;
+}
+#search-block{
+    justify-content: center;
+    width: 100%;
+    margin: 0px;
+    position: absolute;
+    top:-250px;
+    padding: 15px 0px 20px 0px;
+    transition: all .5s ease;
+    background: #f4fbec;
+    box-shadow: 0px 5px 5px 0px #0004;
+    z-index: 0;
+}
+
+#search-block label{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+#search-block input{
+    max-width: 600px;
+    width: 100%;
+    min-width: 600px;
+    background: transparent;
+    border: none;
+}
+#search-block .wp-block-search__inside-wrapper {
+    background: #fff;
+    border: 2px solid #526739;
+    border-radius: 10px
+}
+#search-block .wp-block-search__inside-wrapper button{
+        background: transparent;
+}
+#search-block .close-btn{
+    position: absolute;
+    right: 0px;
+}
+footer{
+    background:#f4fbec;
+}
+.tax-menu .current-menu-item{
+    border-bottom: 2px solid #526739;
+}
+
+#search-block button {
+    padding: 10px;
+    display: flex;
+}
+#search-block button img{
+    margin:0px;
+}
+
+
+#search-list{
+    background:#f4fbec;
+}
+.search-list-block{
+    max-width:1000px;
+    margin: auto;
+}
+.search-item.is-vertical {
+    border: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px #0004;
+    gap: 0rem;
+    background: #fff;
+}
+
+#search-block .close-btn a{
+    position: relative;
+    background: transparent !important;
+    padding: 0px;
+    height: 50px;
+    width: 50px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header #top-menu.bg{
+    background: #f4fbec;
+    transition: all .25s ease;  
+    z-index: 2;
+    position: relative;
+    box-shadow: 0px 5px 5px 0px #0004;
+} 
+header.search-open #top-menu.bg{
+    box-shadow: none !important;
+}
+
+
+.career-card{
+    background: #f4fbec;
+    padding: 20px;
+}
+.career-card .career-title {
+    margin: 0px !important;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+
+.career-card .career-experience {
+    margin: 0px !important;
+    padding-top: 10px;
+}
+body:has(#popup-form.show){
+    overflow: hidden;
+    height: 100%;
+}
+.popup-form.show{
+    display: block;
+}
+
+.popup-form{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: #0004;
+    z-index: 99999;
+    display: none;
+    margin-block: 0px !important;
+
+}
+
+.popup-form .container{
+    max-width: 600px;
+    width: 100%;
+    background: #f4fbec;
+    border-radius: 0px;
+    margin:auto;
+    position: relative;
+    top:10%;
+    padding: 50px 20px;
+}
+.popup-form .container .pop-up-close-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.popup-form .form-group-row{
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.popup-form .form-group-row input,.popup-form .form-group-row textarea{
+        border: 2px solid #526739;
+    border-radius: 10px;
+}
+.popup-form .form-group-row p{
+margin:0px;
+}
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+.overflow-vertical{
+    overflow-x: clip;
+    overflow-y: visible;
+}
 
 @media only screen and (max-width: 1366px) {
     #wealth-management-body .left-side {
@@ -6292,5 +6490,9 @@ ul.resouces_block_list li figure{
 
 
 
+
+}
+
+@media only screen  and (max-height:650){
 
 }
