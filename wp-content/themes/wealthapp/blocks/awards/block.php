@@ -5,8 +5,10 @@
         	<p>Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry, Lorem Ipsum WEALTHAPP Has Been The Industry's Standard Dummy Text SOLUTION PVT LTD Ever Since.</p>
             <p class="year">2019</p>
         </div>
-        <div class="img-area">
-        	<img src="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/award-1st.webp"/>
+        <div class="img-area grayscale">
+              <a class="popimg" href="javascript:void(0)" rel="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/award-1st.webp">
+        	    <img  src="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/award-1st.webp"/>
+              </a>
         	<div class="d-square"></div>
         </div>
     </div>
@@ -16,8 +18,10 @@
             <p>Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry, Lorem Ipsum WEALTHAPP Has Been The Industry's Standard Dummy Text SOLUTION PVT LTD Ever Since.</p>
             <p class="year">2019</p>
         </div>
-        <div class="img-area">
-            <img src="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/award-1st.webp"/>
+        <div class="img-area grayscale">
+            <a class="popimg" href="javascript:void(0)" rel="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/award-1st.webp">
+                <img  src="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/award-1st.webp"/>
+              </a>
             <div class="d-square"></div>
         </div>
     </div>
@@ -27,8 +31,10 @@
             <p>Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry, Lorem Ipsum WEALTHAPP Has Been The Industry's Standard Dummy Text SOLUTION PVT LTD Ever Since.</p>
             <p class="year">2019</p>
         </div>
-        <div class="img-area">
-            <img src="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/award-1st.webp"/>
+        <div class="img-area grayscale">
+            <a class="popimg" href="javascript:void(0)" rel="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/award-1st.webp">
+                <img  src="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/award-1st.webp"/>
+              </a>
             <div class="d-square"></div>
         </div>
     </div>
@@ -38,8 +44,10 @@
             <p>Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry, Lorem Ipsum WEALTHAPP Has Been The Industry's Standard Dummy Text SOLUTION PVT LTD Ever Since.</p>
             <p class="year">2019</p>
         </div>
-        <div class="img-area">
-            <img src="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/award-1st.webp"/>
+        <div class="img-area grayscale">
+           <a class="popimg" href="javascript:void(0)" rel="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/award-1st.webp">
+                <img  src="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/award-1st.webp"/>
+              </a>
             <div class="d-square"></div>
         </div>
     </div>
@@ -49,8 +57,10 @@
             <p>Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry, Lorem Ipsum WEALTHAPP Has Been The Industry's Standard Dummy Text SOLUTION PVT LTD Ever Since.</p>
             <p class="year">2019</p>
         </div>
-        <div class="img-area">
-            <img src="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/award-1st.webp"/>
+        <div class="img-area grayscale">
+           <a class="popimg" href="javascript:void(0)" rel="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/award-1st.webp">
+                <img  src="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/award-1st.webp"/>
+              </a>
             <div class="d-square"></div>
         </div>
     </div>
@@ -60,8 +70,10 @@
             <p>Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry, Lorem Ipsum WEALTHAPP Has Been The Industry's Standard Dummy Text SOLUTION PVT LTD Ever Since.</p>
             <p class="year">2019</p>
         </div>
-        <div class="img-area">
-            <img src="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/award-1st.webp"/>
+        <div class="img-area grayscale">
+            <a class="popimg" href="javascript:void(0)" rel="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/award-1st.webp">
+                <img  src="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/award-1st.webp"/>
+              </a>
             <div class="d-square"></div>
         </div>
     </div>

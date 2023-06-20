@@ -2,7 +2,7 @@
 	<?php if(block_value('s1-profilepic')!=0){
 	$image_attributes = wp_get_attachment_image_src($attachment_id = block_value('s1-profilepic'),"Full size");
 	?>
-	<div class="item">
+	<div class="item grayscale">
 		<a href="javascript:void(0)" class="goto" >
 			<div class="item-content">
 				<div class="image-block">
@@ -20,7 +20,7 @@
 	<?php if(block_value('s2-profilepic')!=0){
 	$image_attributes = wp_get_attachment_image_src($attachment_id = block_value('s2-profilepic'),"Full size");
 	?>
-	<div class="item"> 
+	<div class="item grayscale"> 
 		<a href="javascript:void(0)" class="goto" >
 			<div class="item-content">
 				<div class="image-block">
@@ -38,7 +38,7 @@
 	<?php if(block_value('s3-profilepic')!=0){
 	$image_attributes = wp_get_attachment_image_src($attachment_id = block_value('s3-profilepic'),"Full size");
 	?>
-	<div class="item"> 
+	<div class="item grayscale"> 
 		<a href="javascript:void(0)" class="goto" >
 			<div class="item-content">
 				<div class="image-block">
@@ -56,7 +56,7 @@
 	<?php if(block_value('s4-profilepic')!=0){
 	$image_attributes = wp_get_attachment_image_src($attachment_id = block_value('s4-profilepic'),"Full size");
 	?>
-	<div class="item"> 
+	<div class="item grayscale"> 
 		<a href="javascript:void(0)" class="goto" >
 			<div class="item-content">
 				<div class="image-block">
@@ -74,7 +74,7 @@
 	<?php if(block_value('s5-profilepic')!=0){
 	$image_attributes = wp_get_attachment_image_src($attachment_id = block_value('s5-profilepic'),"Full size");
 	?>
-	<div class="item"> 
+	<div class="item grayscale"> 
 		<a href="javascript:void(0)" class="goto" >
 			<div class="item-content">
 				<div class="image-block">
@@ -92,7 +92,7 @@
 	<?php if(block_value('s6-profilepic')!=0){
 	$image_attributes = wp_get_attachment_image_src($attachment_id = block_value('s6-profilepic'),"Full size");
 	?>
-	<div class="item"> 
+	<div class="item grayscale"> 
 		<a href="javascript:void(0)" class="goto" >
 			<div class="item-content">
 				<div class="image-block">
@@ -110,7 +110,7 @@
 	<?php if(block_value('s7-profilepic')!=0){
 	$image_attributes = wp_get_attachment_image_src($attachment_id = block_value('s7-profilepic'),"Full size");
 	?>
-	<div class="item"> 
+	<div class="item grayscale"> 
 		<a href="javascript:void(0)" class="goto" >
 			<div class="item-content">
 				<div class="image-block">
@@ -128,7 +128,7 @@
 	<?php if(block_value('s8-profilepic')!=0){
 	$image_attributes = wp_get_attachment_image_src($attachment_id = block_value('s8-profilepic'),"Full size");
 	?>
-	<div class="item"> 
+	<div class="item grayscale"> 
 		<a href="javascript:void(0)" class="goto" >
 			<div class="item-content">
 				<div class="image-block">
@@ -146,7 +146,7 @@
 	<?php if(block_value('s9-profilepic')!=0){
 	$image_attributes = wp_get_attachment_image_src($attachment_id = block_value('s9-profilepic'),"Full size");
 	?>
-	<div class="item"> 
+	<div class="item grayscale"> 
 		<a href="javascript:void(0)" class="goto" >
 			<div class="item-content">
 				<div class="image-block">
@@ -164,7 +164,7 @@
 	<?php if(block_value('s10-profilepic')!=0){
 	$image_attributes = wp_get_attachment_image_src($attachment_id = block_value('s10-profilepic'),"Full size");
 	?>
-	<div class="item"> 
+	<div class="item grayscale"> 
 		<a href="javascript:void(0)" class="goto" >
 			<div class="item-content">
 				<div class="image-block">
@@ -186,7 +186,7 @@
 	<?php if(block_value('s1-profilepic')!=0){
 	$image_attributes = wp_get_attachment_image_src($attachment_id = block_value('s1-profilepic'),"Full size");
 	?>
-	<div class="item"> 
+	<div class="item grayscale"> 
 		<div class="item-content">
 			<div class="image-block">
 				<img src="<?php echo block_field("s1-profilepic");?>" alt="<?php block_value("s1-name");?>"  width="<?php echo $image_attributes[1];?>"   height="<?php echo $image_attributes[2];?>" />
@@ -203,7 +203,7 @@
 	<?php if(block_value('s2-profilepic')!=0){
 	$image_attributes = wp_get_attachment_image_src($attachment_id = block_value('s2-profilepic'),"Full size");
 	?>
-	<div class="item">
+	<div class="item grayscale">
 		<div class="item-content">
 			<div class="image-block">
 				<img src="<?php echo block_field("s2-profilepic");?>" alt="<?php block_value("s2-name");?>"  width="<?php echo $image_attributes[1];?>"   height="<?php echo $image_attributes[2];?>" />
@@ -220,7 +220,7 @@
 	<?php if(block_value('s3-profilepic')!=0){
 	$image_attributes = wp_get_attachment_image_src($attachment_id = block_value('s3-profilepic'),"Full size");
 	?>
-	<div class="item"> 
+	<div class="item grayscale"> 
 		<div class="item-content">
 			<div class="image-block">
 				<img src="<?php echo block_field("s3-profilepic");?>" alt="<?php block_value("s3-name");?>"  width="<?php echo $image_attributes[1];?>"   height="<?php echo $image_attributes[2];?>" />
@@ -237,7 +237,7 @@
 	<?php if(block_value('s4-profilepic')!=0){
 	$image_attributes = wp_get_attachment_image_src($attachment_id = block_value('s4-profilepic'),"Full size");
 	?>
-	<div class="item"> 
+	<div class="item grayscale"> 
 		<div class="item-content">
 			<div class="image-block">
 				<img src="<?php echo block_field("s4-profilepic");?>" alt="<?php block_value("s4-name");?>"  width="<?php echo $image_attributes[1];?>"   height="<?php echo $image_attributes[2];?>" />
@@ -254,7 +254,7 @@
 	<?php if(block_value('s5-profilepic')!=0){
 	$image_attributes = wp_get_attachment_image_src($attachment_id = block_value('s5-profilepic'),"Full size");
 	?>
-	<div class="item"> 
+	<div class="item grayscale"> 
 		<div class="item-content">
 			<div class="image-block">
 				<img src="<?php echo block_field("s5-profilepic");?>" alt="<?php block_value("s5-name");?>"  width="<?php echo $image_attributes[1];?>"   height="<?php echo $image_attributes[2];?>" />
@@ -271,7 +271,7 @@
 	<?php if(block_value('s6-profilepic')!=0){
 	$image_attributes = wp_get_attachment_image_src($attachment_id = block_value('s6-profilepic'),"Full size");
 	?>
-	<div class="item"> 
+	<div class="item grayscale"> 
 		<div class="item-content">
 			<div class="image-block">
 				<img src="<?php echo block_field("s6-profilepic");?>" alt="<?php block_value("s6-name");?>"  width="<?php echo $image_attributes[1];?>"   height="<?php echo $image_attributes[2];?>" />
@@ -288,7 +288,7 @@
 	<?php if(block_value('s7-profilepic')!=0){
 	$image_attributes = wp_get_attachment_image_src($attachment_id = block_value('s7-profilepic'),"Full size");
 	?>
-	<div class="item"> 
+	<div class="item grayscale"> 
 		<div class="item-content">
 			<div class="image-block">
 				<img src="<?php echo block_field("s7-profilepic");?>" alt="<?php block_value("s7-name");?>"  width="<?php echo $image_attributes[1];?>"   height="<?php echo $image_attributes[2];?>" />
@@ -305,7 +305,7 @@
 	<?php if(block_value('s8-profilepic')!=0){
 	$image_attributes = wp_get_attachment_image_src($attachment_id = block_value('s8-profilepic'),"Full size");
 	?>
-	<div class="item"> 
+	<div class="item grayscale"> 
 		<div class="item-content">
 			<div class="image-block">
 				<img src="<?php echo block_field("s8-profilepic");?>" alt="<?php block_value("s8-name");?>"  width="<?php echo $image_attributes[1];?>"   height="<?php echo $image_attributes[2];?>" />
@@ -322,7 +322,7 @@
 	<?php if(block_value('s9-profilepic')!=0){
 	$image_attributes = wp_get_attachment_image_src($attachment_id = block_value('s9-profilepic'),"Full size");
 	?>
-	<div class="item"> 
+	<div class="item grayscale"> 
 		<div class="item-content">
 			<div class="image-block">
 				<img src="<?php echo block_field("s9-profilepic");?>" alt="<?php block_value("s9-name");?>"  width="<?php echo $image_attributes[1];?>"   height="<?php echo $image_attributes[2];?>" />
@@ -339,7 +339,7 @@
 	<?php if(block_value('s10-profilepic')!=0){
 	$image_attributes = wp_get_attachment_image_src($attachment_id = block_value('s10-profilepic'),"Full size");
 	?>
-	<div class="item"> 
+	<div class="item grayscale"> 
 		<div class="item-content">
 			<div class="image-block">
 				<img src="<?php echo block_field("s10-profilepic");?>" alt="<?php block_value("s10-name");?>"  width="<?php echo $image_attributes[1];?>"   height="<?php echo $image_attributes[2];?>" />

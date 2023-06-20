@@ -1,21 +1,40 @@
 <div class="gallery owl-carousel owl-theme">
+
     <div class="item" data-dot="01">
-        <img src="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/Photo-Gallery-1-1.webp"/>
+        <a class="grayscale" href="<?php echo block_field('image1');?>" data-fancybox="gallery">
+            <img src="<?php echo block_field('image1');?>"/>
+        </a>
+        
     </div>
     <div class="item" data-dot="02">
-        <img src="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/Photo-Gallery-1-1.webp"/>
+        <a class="grayscale" href="<?php echo block_field('image2');?>" data-fancybox="gallery">
+            <img src="<?php echo block_field('image2');?>"/>
+        </a>
+        
     </div>
     <div class="item" data-dot="03">
-        <img src="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/Photo-Gallery-1-1.webp"/>
+        <a class="grayscale" href="<?php echo block_field('image3');?>" data-fancybox="gallery">
+            <img src="<?php echo block_field('image3');?>"/>
+        </a>
+        
     </div>
     <div class="item" data-dot="04">
-        <img src="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/Photo-Gallery-1-1.webp"/>
+        <a class="grayscale" href="<?php echo block_field('image4');?>" data-fancybox="gallery">
+            <img src="<?php echo block_field('image4');?>"/>
+        </a>
+        
     </div>
     <div class="item" data-dot="05">
-        <img src="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/Photo-Gallery-1-1.webp"/>
+        <a class="grayscale" href="<?php echo block_field('image5');?>" data-fancybox="gallery">
+            <img src="<?php echo block_field('image5');?>"/>
+        </a>
+        
     </div>
     <div class="item" data-dot="06">
-        <img src="https://wealthapp.dotncube.in/wp-content/uploads/2023/05/Photo-Gallery-1-1.webp"/>
+        <a class="grayscale" href="<?php echo block_field('image6');?>" data-fancybox="gallery">
+            <img src="<?php echo block_field('image6');?>"/>
+        </a>
+        
     </div>
 </div>
 

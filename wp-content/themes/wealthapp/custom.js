@@ -343,7 +343,7 @@ if ($(window).width() > 781 ) {
     }else{
         console.log('waring');
     }
-    device_resolution();
+    // device_resolution();
 }
 
 $('p.counts code').each(function () {
@@ -369,10 +369,6 @@ $(".tab-btn a").each(function(){
   
 });
 
-$(document).on("click","#videopopup",function(){
-
-});
-
 $(document).on("click","#get-in-touch-form a",function(){
     console.log("get-in-touch-form");
     $('#get-in-touch-popup').addClass('show');
@@ -381,6 +377,7 @@ $(document).on("click","#get-in-touch-form a",function(){
 $(document).on("click",".pop-up-close-btn a",function(){
     $('#get-in-touch-popup').removeClass('show');
 });
+
 
 
 $(document).on('click',".file-trigger",function(){
@@ -476,46 +473,7 @@ $(document).on('click','.scroll-to-section a',function(e){
     $.scrollify.move(index);
 });
 
-
-$(document).on('submit','form.ajax-form',function(e){
-    e.preventDefault();
-    $.ajax({
-        url: $(this).attr('data-action'),
-        type: $(this).attr('data-method'),
-        data: new FormData(this),
-        processData: false,
-        contentType: false,
-        beforeSend: function(){
-            $(this).find(":submit").attr('disabled',true);
-        },
-        success:function(data){
-            var result = jQuery.parseJSON(data);
-             if(result.status=='success'){
-                 if(result.appendclass!=undefined){
-                     $(result.appendclass).remove();
-                 }
-                if(result.html!=undefined){
-                    $('body').append(result.html)
-                    if(result.call_jsfunction !=undefined){
-                        window[result.call_jsfunction]();
-                    }
-                }
-            }else{
-                custom_notification(result.message,'Error','red')
-            }
-            
-            return false;
-        }
-    }).done(function(){
-        $(this).trigger("reset");
-        $(this).find(":submit").attr('disabled',false);
-    });        
-});
-
-
-
-
-function only_alphabets(val){
+function onlyalphabets(val){
          if(!/^[a-zA-Z .]*$/g.test(val)){
              return false;
          }
@@ -523,6 +481,7 @@ function only_alphabets(val){
     }
     
 function phonenumber(val){
+    
     if(!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{2,6}$/i.test(val)){
         return false;
     }
@@ -536,34 +495,61 @@ function email(val){
     return true;
 }
 
-function min_chars(val, count){
+function onlynumeric(val){
+    if(!/^[0-9 .]*$/g.test(val)){
+         return false;
+    }
+    return true;
+}
+
+function minchars(val, count){
     return val.length >= count;
 }
 
-function max_chars(val, count){
+function maxchars(val, count){
+    return val.length <= count;
+}
+
+function chars(val, count){
     return val.length <= count;
 }
 
 
-jQuery(document).on('blur','.form-field-validate',function(){
-    console.log('out');
-    var required = jQuery(this).attr('data-required');
-    var validatetype = jQuery(this).attr('data-validate');
+function parse(str) {
+    var args = [].slice.call(arguments, 1),
+        i = 0;
+
+    return str.replace(/%s/g, () => args[i++]);
+}
+
+
+function check_datetime(str){
+  return new Date().getTime() < Date.parse(str);
+}
+
+$(document).on('blur','.form-field-validate',function(){
+    var form_id = $(this).closest('form').attr('id');
+    var required = $(this).attr('data-required');
+    var validatetype = $(this).attr('data-validate');
+    var length =1;
     if(validatetype!=undefined){
         var validatetypeoption = validatetype.split('|');
+        length =validatetypeoption.length;
     }
-    
-    var value = jQuery(this).val();
+    var value = $(this).val();
     
     var error_msg = {
         'required_error' : "this field is required",
-        'only_alphabets' : 'Please enter a valid input',
+        'onlyalphabets' : 'Please enter a valid input',
         'phonenumber' : 'Please enter a valid phone number',
+        'onlynumeric' :'this field only accepts only numbers',
         'email' : 'Please enter a valid email',
+        'minchars':'minimum length should be  %s',
+        'maxchars':'maximum length should be  %s',
+        'chars':'character length should be  %s',
+        'check_datetime':'Please select a valid appointment Date & Time'
     }
-    let sentence = `${name} is ${age} years old and likes ${food}`;
-    
-    
+
     var err_msg ="";
 
     
@@ -575,24 +561,36 @@ jQuery(document).on('blur','.form-field-validate',function(){
     
     
     if(validatetype!=undefined && err_msg=="" ){
-         if(window[element](validatetype)==false ){
+        if(length==1){
+            if(window[validatetype](value)==false ){
                 err_msg = error_msg[validatetype];
-            } 
-        
-        validatetypeoption.foreach((element)=>function(){
-            if(window[element](value)==false && err_msg=="" ){
-                err_msg = error_msg[element];
-            } 
-        });
+            }  
+        }else{
+            validatetypeoption.forEach(function(element){
+
+                if(element.split('_').length == 1){
+                    if(window[element](value)==false && err_msg=="" ){
+                        err_msg = error_msg[element];
+                    }  
+                }else{
+                    var values = element.split('_');
+                    var functionname = values[0];
+                    var functionaruguments = values[1];
+                    if(window[functionname](value,functionaruguments)==false && err_msg=="" ){
+                        err_msg = parse(error_msg[functionname], functionaruguments) ;
+                    } 
+                }
+            });
+        }
     }  
     if(err_msg!=""){
-        
-        jQuery(this).closest('.form-group').find('.error_txt').html(err_msg);
+        $(this).closest('.form-group').find('.error_txt').html(err_msg);
+        $('#'+form_id+' input[type="submit"]').prop('disabled', true);
     }else{
-        jQuery(this).closest('.form-group').find('.error_txt').html("");
+        $(this).closest('.form-group').find('.error_txt').html("");
+        $('#'+form_id+' input[type="submit"]').prop('disabled', false);
     }
 });
-
 
 $(document).on('change','.tax-scheme',function(){
     $(".tab-content").removeClass('active');
