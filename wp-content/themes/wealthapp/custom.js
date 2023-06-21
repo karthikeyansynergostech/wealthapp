@@ -43,6 +43,18 @@ var option = {
     loop:false,
     dots: true,
     responsive:{
+        0:{
+            items:1,
+            margin:10,
+        },
+        600:{
+            items:1,
+            margin:10,
+        },
+        800:{
+            items:1,
+            margin:20,
+        },
         1000:{
             items:1,
             margin:50,
@@ -55,6 +67,18 @@ var linedotsoption = {
     loop:false,
     dots: true,
     responsive:{
+         0:{
+            items:1,
+            margin:10,
+        },
+        600:{
+            items:1,
+            margin:10,
+        },
+        800:{
+            items:1,
+            margin:20,
+        },
         1000:{
             items:1,
             margin:50,
@@ -103,7 +127,7 @@ var team_thumbnailoption = {
         center:true,
         responsive:{
             0:{
-                items:1,
+                items:2,
             },
             600:{
                 items:1,
@@ -151,6 +175,18 @@ var team_option = {
     nav:true,
     dots:false,
     responsive:{
+        0:{
+            items:1,
+            margin:0,
+        },
+        600:{
+            items:1,
+            margin:0,
+        },
+        800:{
+            items:1,
+            margin:20,
+        },
         1000:{
             items:1,
             margin:50,
@@ -409,7 +445,6 @@ function switchtab(element){
 }
 
 $(document).on('click','.tab-button',function(){
-    alert("click");
     var tab_section = $(this).attr('data_id');
     $(".tab-button").removeClass("active");
     $(this).addClass('active');
@@ -615,4 +650,11 @@ $(document).on('click','#search-close.close-btn a',function(){
     if(scroll_position==0){
         $('#top-menu').removeClass('bg');
     }
+});
+
+$(document).on('click','.tab-button-list .wp-element-button',function(){
+    $(".tab-content").removeClass('active');
+    $('.wp-block-button').removeClass('active');
+    $(this).parent('.wp-block-button').addClass('active');
+    $("#"+$(this).attr('rel')).addClass('active');
 });
