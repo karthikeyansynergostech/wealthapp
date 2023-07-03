@@ -309,10 +309,7 @@ function custom_javascript() { ?>
 			$('body').addClass('stop-scroll');
 		});
 		
-		// $(".various").fancybox({
-		// 	'transitionIn'	: 'none',
-		// 	'transitionOut'	: 'none'
-		// });
+		
 		$('.various').on('click',function(){
 			var url = $(this).attr('rel');
 			Fancybox.show([

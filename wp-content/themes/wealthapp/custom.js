@@ -290,7 +290,6 @@ function device_resolution(){
 
 $(document).ready(function(){
 if ($(window).width() > 781 ) {
-    console.log();
     if($('#disable_scrollify').length==0){
         $.scrollify({
             section : ".section-block",
@@ -324,6 +323,21 @@ if ($(window).width() > 781 ) {
                                 elem.classList.add('aligncenter'); 
                             }
                         });
+                        // console.log(elem.classList.contains('section-3'));
+                        // if(elem.classList.contains('section-3')){
+                        //     $('p.counts code').each(function () {
+                        //         console.log('Counter')
+                        //         $(this).prop('Counter',0).animate({
+                        //             Counter: $(this).text()
+                        //         }, {
+                        //             duration: 3000,
+                        //             easing: 'swing',
+                        //             step: function (now) {
+                        //                 $(this).text(Math.ceil(now));
+                        //             }
+                        //         })
+                        //     });
+                        // }
 
                         scatter.forEach(classname=>{
                             if(elem.classList.contains(classname)){
@@ -382,17 +396,9 @@ if ($(window).width() > 781 ) {
     // device_resolution();
 }
 
-$('p.counts code').each(function () {
-    $(this).prop('Counter',0).animate({
-        Counter: $(this).text()
-    }, {
-        duration: 3000,
-        easing: 'swing',
-        step: function (now) {
-            $(this).text(Math.ceil(now));
-        }
-    })
-});
+
+
+
 
 
 $(".tab-btn a").each(function(){
@@ -545,6 +551,16 @@ function maxchars(val, count){
     return val.length <= count;
 }
 
+function minnum(val, count){
+    return val.length >= count;
+}
+
+function maxnum(val, count){
+    return val.length <= count;
+}
+
+
+
 function chars(val, count){
     return val.length <= count;
 }
@@ -581,6 +597,8 @@ $(document).on('blur','.form-field-validate',function(){
         'email' : 'Please enter a valid email',
         'minchars':'minimum length should be  %s',
         'maxchars':'maximum length should be  %s',
+        'minnum':'minimum number should be  %s',
+        'maxnum':'maximum number should be  %s',
         'chars':'character length should be  %s',
         'check_datetime':'Please select a valid appointment Date & Time'
     }
